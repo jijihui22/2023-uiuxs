@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Corp</title>
+  <style>
+    .popup{
+      position: fixed;
+      left: 100px;
+      top: 100px;
+      border:1px solid #ebebeb;
+      box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+      padding: 20px 40px;
+      border-radius: 10px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>ABC Corp</h1>
+
+  <dialog class="popup">
+    <!-- open추가 안추가에 따라 보임 -->
+    <h2>dialog</h2>
+    <label for="daycheck">오늘 하루 안보기</label>
+    <input type="checkbox" id="daycheck">
+    <button type="button" id="close">Close</button>
+  </dialog>
+
+  <script>
+    let popup = document.querySelector('.popup'),
+        closeBtn = popup.querySelector('#close'),
+        dayCheck = popup.querySelector('#daycheck');
+
+    //쿠키생성 함수 setCookie
+    function setCookie(name,value,day){
+      let date = new Date();
+      date.setDate(date.getDate()+day);   
+      document.cookie = `${name}=${value};expires=${date.toUTCString()}`;
+    }
+    //'ABC','home', 7 쿠키 생성
+    //setCookie('ABC','home', 1);
+    //쿠키 확인
+    function cookieCheck(name){
+    let cookieArr = document.cookie.split(';');
+    let visited = false;//false면 팝업 보이쟈
+
+    for(let cookie of cookieArr){
+      if(cookie.search(name) > -1){
+        visited = true;
+        break;
+      }
+    }
+    //만약 visited의 값이 false라면 dialog가 보인다
+    if(!visited){
+      popup.setAttribute('open','');//속성만 넣어줄땐 이렇게 써준다
+    }
+   }//cookieCheck
+   cookieCheck('ABC');
+
+  /*closeBtn클릭하면 할일
+    팝업을 닫는다
+      만약 오늘하루 안보기가 체크되어 있다면 대상.checked주면 true, false 나온다
+    쿠키생성
+      아니라면
+    쿠키제거
+  */
+   closeBtn.addEventListener('click',()=>{
+    popup.removeAttribute('open');
+    if(dayCheck.checked){
+      setCookie('ABC','home', 1);
+    }else{
+      setCookie('ABC','home', -1);
+    }
+   });
+   
+  </script>
+</body>
+</html>

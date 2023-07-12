@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu li {
+  margin-top: 25px;
+}
+
+.menu a {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.4;
+  color: silver;
+}
+
+.menu a::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  color: #3498db;
+  white-space: nowrap;
+  transition: all 0.15s cubic-bezier(0.29, 0.73, 0.74, 1.02);
+}
+
+.menu [data-animation] a::before,
+.menu a:hover::before {
+  width: 100%;
+}
+
+.menu [data-animation="to-left"] a,
+.menu [data-animation="to-top"] a {
+  color:#3498db;
+}
+
+.menu [data-animation="to-left"] a::before,
+.menu [data-animation="to-top"] a::before {
+  color: silver;
+}
+
+.menu [data-animation="to-left"] a:hover::before {
+  width: 0;
+}
+
+.menu [data-animation="to-top"] a::before {
+  height: 100%;
+}
+
+.menu [data-animation="to-top"] a:hover::before {
+  height: 0;
+}
+
+.menu [data-animation="to-bottom"] a::before {
+  height: 0;
+}
+
+.menu [data-animation="to-bottom"] a:hover::before {
+  height: 100%;
+}

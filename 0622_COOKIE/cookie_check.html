@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function cookieCheck(){
+      alert(document.cookie);//? 왜 이것으로 출력해봤는지
+    };
+  </script>
+</head>
+<body>
+  <h1>cookie check</h1>
+  <button id="check">쿠키체크</button>
+  <script>
+    let btn = document.querySelector('#check');
+    // btn.addEventListener('click', ()=>{
+    //   cookieCheck();
+    // })
+    //할일 2번이니 줄이자 그래도 같다
+    btn.addEventListener('click', cookieCheck)
+  </script>
+</body>
+</html>

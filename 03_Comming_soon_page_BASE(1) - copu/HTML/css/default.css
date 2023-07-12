@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('../webfonts/PTSans-Regular.woff') format('woff2'),
+      url('../webfonts/PTSans-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* font-family: 'PT Sans', sans-serif; */
+/* font-family: 'Gentium Basic', serif; */
+
+a{
+  text-align:center;
+  color: #000;
+}

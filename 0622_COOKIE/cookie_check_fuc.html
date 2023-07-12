@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function cookieCheck(name){
+      // alert(document.cookie);
+      let cookieArr = document.cookie.split(';')
+      console.log(cookieArr);
+
+      for(let cookie of cookieArr){
+        if(cookie.search(name) > -1){
+          alert(`${name}의 쿠키가 있습니다`)//없으면 -1이라 있으면 나옴
+        }
+      }
+    };
+
+    function setCookie(name,value,day){
+      let date = new Date();//자바스크립트 현재시간 불러오는 함수
+      date.setDate(date.getDate()+day);
+
+      let setCookie = ''
+      setCookie += `${name}=${value}`;
+      setCookie += `expires = ${date.toUTCString()}`;
+      document.cookie = setCookie;
+    }
+    setCookie('ABC', 'home', 7)
+    setCookie('Apple', 'home', 7)
+    setCookie('naver', 'home', 7)
+  </script>
+</head>
+<body>
+  <h1>cookie check</h1>
+  <button id="check">쿠키체크</button>
+  <script>
+    let btn = document.querySelector('#check');
+
+    btn.addEventListener('click', ()=>{
+      cookieCheck('ABC')
+    })
+  </script>
+</body>
+</html>

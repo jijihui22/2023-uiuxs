@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow</title>
+    <style>
+        .text {
+            /* text-shadow:x축 y축 blue color 참고로 그림자를 한 요소에 여러개 넣을 수 있음*/
+            text-shadow:15px 15px 20px rgba(0, 0, 0, .5),
+            5px 5px 10px rgba(0, 0, 0, .5);
+            /* text-shadow:10px 10px 0 #fffc00,
+            20px 20px 0 #f00; */
+            font-size:70px;
+            text-transform: uppercase;
+        }
+
+        .box {
+            width: 200px;
+            border: 1px solid #ccc;
+            /* box-shadow:x y blur (size) color border-radius로는 안쪽 직각 바깥 둥글밖에 안되 안쪽까지 둥글라면 border-shadow까지 줘야함*/
+            /* box-shadow:0 0 0 10px rgba(255, 0, 0, .5); inset은 안쪽으로 새도우하는 것*/
+            /* border-radius: 5px; */
+            /* border:10px solid rgba(255, 0, 0, .5); */
+            box-shadow:inset 0 0 10px rgba(0, 0, 0, .35)
+        }
+
+        input {
+            border: 1px solid #ccc;
+            outline:none;/* 폼에 포커스걸리면 생기는 테두리 검게 되는 거 없애기 */
+           
+        }
+
+        input:focus {
+            box-shadow:inset 0 0 10px rgba(0, 0, 0, .35)
+           
+        }
+
+        .modal .content{
+            width: 300px;
+            height: 100px;
+            border: 1px solid #ccc;
+            background: #fff;
+            position: absolute;
+            left: calc(50% - 150px);
+            top:calc(50% - 50px);
+            border-radius:10px;
+            box-shadow:5px 5px 5px rgba(0, 0, 0, .3)
+        }
+
+        .modal {
+            position: fixed;
+            left: 0;top: 0;right: 0;bottom: 0;
+            background: rgba(0, 0, 0, .7);
+            display:none;
+        }
+        .modal:target{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>shadow</h1>
+    <h2 class="text">text-shadow</h2>
+    <h2 class="box">box-shadow</h2>
+    <hr>
+    <input type="text">
+    <hr>
+    <div class="modal">modal content</div>
+    <hr>
+    <a href="#modal">open modal</a>
+    <div class="modal" id="modal">
+        <div class="content">
+            modal
+            <a href="#">close</a>
+        </div>
+    </div>
+</body>
+
+</html>

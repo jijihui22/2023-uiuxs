@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#birth" ).datepicker();
+    } );
+  </script>
+</head>
+<body>
+  <h1>회원가입</h1>
+  
+<form action="10_login.html" method="post">
+  <fieldset>
+    <legend>필수입력</legend>
+    <p>
+        <label for="username">이름:</label>
+        <input type="text" id="username" name="username" required minlength="2" maxlength="5" autofocus placeholder="이름을 입력해주세요.">
+    </p>
+    
+    <p>
+        <label for="useremail">이메일</label>
+        <input type="email" name="useremail" required multiple>
+    </p>
+  
+    <p>
+      <label for="userpw">비밀번호</label>
+      <input type="password" name="userpw" required>
+    </p>
+    <input type="hidden" name="location" value="초기화면">
+  </fieldset>
+
+  <fieldset>
+    <legend>부가입력</legend>
+    <p>
+      <label for="phone">연락처</label>
+      <input type="tel" id="phone" placeholder="000-0000-0000" pattern="[0-9]{2,3}-[0-9]{4}-[0-9]{4}" title="힌트형식에 맞춰 작성해주세요.">
+    </p>
+    <p>
+      <label for="birth">생년월일</label>
+      <input type="text" id="birth">
+    </p>
+    <p>
+      <label for="address">지역</label>
+      <select name="address" id="address">
+        <option value="서울시">서울시</option>
+        <option value="경기도">경기도</option>
+        <option value="제주도">제주도</option>
+      </select>
+    </p>
+    <p>
+      <span>기혼여부</span>
+      <label for="married">기혼</label>
+      <input type="radio" name="married" id="married" value="기혼">
+
+      <label for="unmarried">미혼</label>
+      <input type="radio" name="married" id="unmarried" value="미혼" checked>
+    </p>
+    <p>
+      <span>취미</span>
+      <label for="sports">운동</label>
+      <input type="checkbox" id="sports" name="interest" value="운동" checked>
+
+      <label for="reading">독서</label>
+      <input type="checkbox" id="reading" name="interest" value="독서">
+
+      <label for="game">게임</label>
+      <input type="checkbox" id="game" name="interest" value="게임">
+    </p>
+    <p>
+      <label for="msg">인사말</label>
+      <textarea name="" id="msg" cols="30" rows="10" placeholder="인사말을 작성해주세요."></textarea>
+    </p>
+    <p>
+      <label for="profile">프로필 등록</label>
+      <input type="file" id="profile" multiple>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>HTML 5 신속성</legend>
+    <div>
+      <label for="city">시티</label>
+      <input type="text" id="city" list="citylist">
+      <datalist id="citylist">
+        <option value="서울시"></option>
+        <option value="강릉시"></option>
+        <option value="제주시"></option>
+      </datalist>  
+    </div>
+    <div>
+      <label for="colors">색상</label>
+      <input type="color">
+    </div>
+    <div>
+      <label for="website">웹사이트</label>
+      <input type="url">
+    </div>
+    <div>
+      <label for="career">경력</label>
+      <input type="number" min="0" max="10" step="2" value="2">
+    </div>
+    <div>
+      <label for="skill">숙련도</label>
+      <input type="range">
+    </div>
+    <div>
+      <label for="search">검색</label>
+      <input type="search" id="search">
+    </div>
+  </fieldset>
+
+  <p>
+    <input type="submit" value="회원가입">
+    <!-- <button>회원가입</button>
+    <input type="image" src="images/sand.png" alt="전송">
+    <button><img src="images/sand.png" alt="전송"></button>
+    
+    <input type="reset" value="초기화">
+    <button type="reset">초기화</button> -->
+  </p>
+</form>
+<hr>
+<a href="#" tel="010-0000-0000">
+  010-1233-1233
+</a>
+<h2>진척률</h2>
+  <progress max="100" value="50"></progress>
+  <meter max="100" value="30"></meter> 
+<!-- <button type="button">팝업 확인하기</button> -->
+  <!-- <label for="name">이름:
+    <input type="text" id="name">
+  </label> -->
+
+
+
+</body>
+</html>

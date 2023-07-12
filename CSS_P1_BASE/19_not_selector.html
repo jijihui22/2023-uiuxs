@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부정 선택자</title>
+    <style>
+        ul li:not(:first-child){
+            color: aqua;
+        }
+        /* p a:nth-child(n+2){
+            margin-left:20px;
+        }      */
+        p a + a{
+            margin-left:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>부정 선택자</h1>
+    <header>
+        <h1>logo</h1>
+        <h2>main title</h2>
+        <p>Brief Description</p>
+        <a href="">read more</a>
+    </header>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <p>
+        <a href="">link1</a>
+        <a href="">link2</a>
+        <a href="">link3</a>
+        <a href="">link4</a>
+        <a href="">link5</a>
+    </p>
+</body>
+
+</html>

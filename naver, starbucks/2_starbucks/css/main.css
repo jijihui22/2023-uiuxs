@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;list-style:none;
+}
+.container h1{
+  float: left;
+}
+.container nav{
+  float: right; 
+}
+.container:after{
+  content:"";
+  clear:both;
+  display: block;
+}
+.top_menu li{
+  float:left;
+}
+.top_menu li + li{
+  padding-left: 20px;
+}
+.main_menu li{
+  float: right;
+}
+.main_menu li + li{
+  padding-left: 20px;
+}
+dl{
+  display: none;
+}
+h1 a{
+  width:75px;
+  height:75px;
+  background-image:url(../images/logo\ \(1\).png);
+  background-repeat:no-repeat;
+  display:block;
+}
+h1{
+  text-indent:-1000px
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>table</title>
+  <style>
+    table {width:80%}
+    .col1 {width:10%;}
+    .col2 {width:20%;}
+    .col3 {width:50%;}
+  </style>
+</head>
+<body>
+  <h1>table</h1>
+  <table border="1">
+    <colgroup>
+      <col class="col1" />
+      <col class="col2" />
+      <col class="co31" />
+      <col class="col2" />
+    </colgroup>
+    <caption>
+      <h2>테이블 제목</h2>
+      <p>테이블 설명</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th><!-- table heading -->
+        <th scope="col">제목1</th><!-- table heading -->
+        <th scope="col">제목2</th><!-- table heading -->
+        <th scope="col">제목3</th><!-- table heading -->
+      </tr><!-- table row -->
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th><!-- table data -->
+        <td>data11</td><!-- table data -->
+        <td>data12 data12 data12</td><!-- table data -->
+        <td>data13</td><!-- table data -->
+      </tr><!-- table row -->
+      <tr>
+        <th scope="row">2</th><!-- table data -->
+        <td>data21</td><!-- table data -->
+        <td>data22</td><!-- table data -->
+        <td>data23</td><!-- table data -->
+      </tr><!-- table row -->
+      <tr>
+        <th scope="row">3</th><!-- table data -->
+        <td>data31</td><!-- table data -->
+        <td>data32</td><!-- table data -->
+        <td>data33</td><!-- table data -->
+      </tr><!-- table row -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">total</th><!-- table data -->
+        <td>total 1</td><!-- table data -->
+        <td>total 2</td><!-- table data -->
+        <td>total 3</td><!-- table data -->
+      </tr><!-- table row -->
+    </tfoot>
+  </table>
+  <table border="1">
+    <colgroup>
+      <col class="col1" />
+      <col class="col2" />
+      <col class="co31" />
+      <col class="col2" />
+    </colgroup>
+    <caption>
+      <h2>테이블 제목</h2>
+      <p>테이블 설명</p>
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">구분</th><!-- table heading -->
+        <th scope="col">제목1</th><!-- table heading -->
+        <th scope="col">제목2</th><!-- table heading -->
+        <th scope="col">제목3</th><!-- table heading -->
+      </tr><!-- table row -->
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th><!-- table data -->
+        <td rowspan="3">data11</td><!-- table data -->
+        <td>data12 data12 data12</td><!-- table data -->
+        <td>data13</td><!-- table data -->
+      </tr><!-- table row -->
+      <tr>
+        <th scope="row">2</th><!-- table data -->
+        <td>data22</td><!-- table data -->
+        <td>data23</td><!-- table data -->
+      </tr><!-- table row -->
+      <tr>
+        <th scope="row">3</th><!-- table data -->
+        <td>data32</td><!-- table data -->
+        <td>data33</td><!-- table data -->
+      </tr><!-- table row -->
+      <tr>
+        <th scope="row">4</th><!-- table data -->
+        <td colspan="3">data41</td><!-- table data -->
+      </tr><!-- table row -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">total</th><!-- table data -->
+        <td>total 1</td><!-- table data -->
+        <td>total 2</td><!-- table data -->
+        <td>total 3</td><!-- table data -->
+      </tr><!-- table row -->
+    </tfoot>
+  </table>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Animation</title>
+  <style>
+    .rate{
+      height: 25px;
+      position: relative;
+      border:2px solid #ccc;
+    }
+    .rate .bar{
+      position: absolute;
+      left: 0;top: 0;bottom: 0;
+      width: 0;
+      background: #3498db;
+    }
+    .rate span{
+      position: absolute;
+      right: 20px; top: 0; bottom: 0; line-height: 25px;
+      font-weight: bold;
+    }
+    section{
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>content title</h2>
+  </section>
+  <div class="rate" data-num="45">
+    <div class="bar"></div>
+    <span>0</span>
+  </div>
+  <section>
+    <h2>content title</h2>
+  </section>
+  <script>
+    let rate = document.querySelector('.rate'),
+        rateOST = rate.offsetTop - 500,
+        bar = rate.querySelector('.bar'),
+        span = rate.querySelector('span'),
+        num = 0,//시작숫자 ?
+        targetNum = Number(rate.dataset.num),
+        myswich = false;
+        console.log(rateOST)
+        /*
+         변수명 animation에 setInterval 저장
+          setInterval은 10초 마다 할일 1000 = 1s
+            num값을 1씩 올리고 그 값을 span태그의 내용으로 변경
+            만약 num의 값이 targetNum와 같아지면 setInterval 종료
+        */
+
+
+        /*
+        윈도우에 스크롤이 생기면 할일
+          그 양이 rateOSP보다 많다면 애니메이션 적용
+        */
+        window.addEventListener('scroll', ()=>{//만약 스크롤이 생기면
+          if(window.scrollY > rateOST){//많더라고 스위치가 켜있으면 안하고싶은거  
+            if(myswich == false){//이게 변수명과 같으면 실행
+              // animation()
+            let animation = setInterval(()=>{
+            span.innerText = ++num;//*****
+              if(num == targetNum) {//===는 안됨 data-num="45"에서 45는 문자다!!
+                clearInterval(animation);
+            }
+
+            //bar의 너비를 변경
+            bar.style.width = `${num}%`//***% 단위 줘야한다 ''안에 들어가야 하는 거에 ''에 숫자 변수니 `${}`로 변수 감싸고 넌다
+            
+            //scroll 50%되면
+            //다음에 if문을 실행하고싶어도 myswich = ture라 안됨     
+          }, 10)
+          myswich = true;//이제 스위치 켜 안하게함 
+        }
+      }
+        })
+        //targetNum = parseInt(rate.dataset.num)문자를 숫자 정수로 바꾸는 법
+        
+        
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+li{
+  list-style-type:none;
+}
+a{
+  width: 108px;
+  height: 32px;
+  background-image:url(../img/tab_sprites.gif);
+  display: block;
+  background-position:0 0;
+  text-indent:-1000px;
+}
+li:nth-child(2) a{
+  background-position:-108px 0;
+}
+li:nth-child(2) a:hover{
+  background-position-y:-108px 100%;
+}
+li a{
+  background-position:-108px 0;
+}

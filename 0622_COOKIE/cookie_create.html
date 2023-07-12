@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠키 만들어보기</title>
+  <script>
+    let date = new Date();//자바스크립트 현재시간 불러오는 함수
+    // console.log(date)
+    // console.log(date.getDate()+7)
+  
+    // console.log(date)
+    // console.log(date.getFullYear())
+    // console.log(date.getMonth()+1)//0부터
+    // console.log(date.getHours())
+    // console.log(date.getMinutes())
+
+    let setCookie = ''
+    setCookie += 'ABC=home';
+    setCookie += 'expires='+ date.toUTCString();
+    document.cookie = setCookie;//쿠키에 데이터 넣어줄ㄹㄹ
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

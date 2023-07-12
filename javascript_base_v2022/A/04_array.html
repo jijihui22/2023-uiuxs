@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+    <script>
+        /*
+        새 배열 생성
+        var 배열명 = []; //빈 배열
+        배열명[0] = 값
+        배열명[1] = 값
+
+        var 배열명 [값, 값, 값]
+        */
+
+        var mynums = [];
+        mynums[0] = 2;
+        mynums[1] = 5;
+        mynums[2] = 10;
+        console.log(mynums)
+        console.log(mynums[2])
+        console.log(mynums.length);
+
+        var frontlangs = ['html', 'css', 'js']
+        console.log(frontlangs[1]);
+        console.log(frontlangs.length);
+        
+    </script>
+    <hr>
+    <script>
+    </script>
+    <hr>
+    <script>
+
+    </script>
+     <h2>join</h2>
+     <script>
+         /*  
+         배열 ->문자열 (한문장 묶어준다)
+         */
+     </script>
+     <h2>reverse</h2>
+     <script>
+     var frontlang2 = frontlangs.join('=')
+     console.log(frontlang2)
+    
+ 
+     var frontlang3 = frontlangs.join('')
+     console.log(frontlang3)
+     
+     </script>
+    <h2>reverse</h2>
+    <p>원수들을 반대로 정렬</p>
+    <script>
+     var reverselangs = frontlangs.reverse('=')
+    console.log(reverselangs)
+    // console.log(frontlang2)
+    </script>
+   
+    <h2>sort</h2>
+    <p>오름차순, 내림차순, 가나다, 숫자 로 정렬해준다 원본수정한다</p>
+    <script>
+        var fruits = ['배', '사과', '귤'];
+        console.log(fruits)
+        // fruits.sort();
+        // console.log(fruits)
+        var nums = [10, 20, 30, 40];
+        
+        // nums.sort(function(){
+        //     return -1 //-1은 역순효과를 냄
+        // })
+        // console.log(nums)
+
+        // nums.sort(function(){
+        //     return b-a //내림차순효과를 냄 순자만 가능하다
+        // })
+        // console.log(nums)
+        // nums.sort()
+        // console.log(nums)
+
+
+    </script>
+    <h2>push</h2>
+    <p>기존의 배열에 마지막 에 값 추가</p>
+    <script>
+        fruits.push('포도')
+        console.log(fruits)
+    </script>
+    <h2>pop</h2>
+    <p>마지막값 터지게 하는 것</p>
+    <script>
+        fruits.pop()
+        console.log(fruits)
+    </script>
+    <h2>unshift</h2>
+    <p>맨앞에 값 추가</p>
+    <script>
+        fruits.unshift('홍시')
+        console.log(fruits)
+    </script>
+    <h2>shift</h2>
+    <p>맨앞 값 삭제함</p>
+    <script>
+        fruits.shift()
+        console.log(fruits)
+    </script>
+    <h2>slice</h2>
+    <p>배열에서 인덱스번호로 원소를 복사(추출) 
+        시작번호부터 끝 번호 바로 앞 원본그대로</p>
+    <script>
+        var orgArr = [0, 1, 2, 3, 4, 6]
+        var newArr = orgArr.slice(0, 3)
+        console.log(newArr)
+        console.log(orgArr.slice(2, 5))
+        console.log(orgArr)
+        console.log(newArr.slice(2))
+    </script>
+    <h2>splice</h2>
+    <p>배열에서 인덱스번호로 원소를 오려내기 
+        시작번호부터 끝 번호 바로 앞 원본바뀜</p>
+    <script>
+        var orgArr2 = [0,1,2,3,4,5]
+        var newArr = orgArr2.splice(0,2);
+        console.log(newArr)
+        console.log(orgArr2)
+    </script>
+    <h2>concat</h2>
+    <p>배열 병합</p>
+    <script>
+        var arr1 = ['html', 'css', 'javascipt']
+        var arr2 = ['java', 'asp']
+        var arr3 = arr1.concat(arr2)
+        console.log(arr3)
+    </script>
+    <h2>filter</h2>
+    <p>조건에 맞는 원수만 추출 새 배열</p>
+    <script>
+        var num4 = [1,10, 20, 30,40]
+        var mynum2 = num4.filter(function(item){
+            return item % 5 == 0
+        })
+        console.log(mynum2)
+    </script>
+</body>
+
+</html>

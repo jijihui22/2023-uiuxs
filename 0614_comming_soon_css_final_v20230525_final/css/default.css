@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+@font-face {
+  font-family: 'Gentium Basic';
+  src: url('../webfonts/GentiumBasic.woff2') format('woff2'),
+      url('../webfonts/GentiumBasic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/*
+font-family: 'PT Sans', sans-serif;
+font-family: 'Gentium Basic', serif;
+*/
+
+
+/* RESET */
+a{
+  text-decoration: none;
+  color: #000;
+}
+input, button{
+  border:none;
+  background:none;
+}
+
+/* LAYOUT */
+body{
+  background: url('../images/light-bg.jpg');
+}
+.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+.cont-pd{
+  padding: 48px 0;
+}
+.hidden{
+  /* display: none; */
+  position: absolute;
+  left: 0;
+  top: -9999em;
+  overflow: hidden;
+}
+
+/* TYPOGRAPHY */
+body{
+  /* font-family: 'PT Sans', sans-serif;
+  font-size:16px;
+  line-height:24px; */
+  font:16px/24px 'PT Sans', sans-serif;
+  color: #626262;
+}
+h1,h2,h3,h4 {
+  font-family: 'Gentium Basic', serif;
+}
+section > h2{
+  font-size: 24px;  
+  text-align: center;
+}
+section > h2:before{
+  content:'- ';
+}
+section > h2:after{
+  content:' -';
+}
+
+/* HEADER */
+header{
+  text-align: center;
+  background: #fff;
+}
+header h1{
+  width: 72px;
+  height: 72px;
+  background:url('../images/logo.png') no-repeat;
+  text-indent:-9999em;
+  margin:0 auto 48px;
+}
+header h2{
+  width: 507px;
+  margin: 0 auto;
+  font-size: 36px;
+  line-height:48px;
+  color: #2f2f2f;
+}
+hr{
+  border:none;
+  /* border-top:1px solid #d1d6d4; */
+  height: 1px;
+  background: #d1d6d4;
+  width: 400px;
+  margin:48px auto;
+}
+header p{
+  font-size: 24px;
+  line-height: 34px;
+  font-family: 'Gentium Basic', serif;
+  width: 598px;
+  margin:0 auto;
+}
+header p strong{
+  color: #f93f1c;
+}
+/* form */
+.form{
+  background:#2f2f2f url(../images/envelopes.png) no-repeat center;
+}
+.form form{
+  width: 307px;
+  margin:0 auto;
+}
+.form form div + div{
+  margin-top: 6px;
+}
+.form input {
+  width: 100%;
+  line-height: 42px;
+  background: #fff;
+  text-align: center;
+  font-size: 14px; 
+}
+
+.form input::-webkit-input-placeholder { /* Edge */
+  color: #c3c3c3;
+}
+
+.form input::placeholder {
+  color: #c3c3c3;
+}
+.form p{
+  font-size: 14px;
+  color: #c3c3c3;
+  text-align: center;
+  font-style: italic;
+  margin:30px 0 24px;
+}
+.form button{
+  width: 100%;
+  background: #f93f1c;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 48px;
+}
+
+/* progress */
+.progress > h2{
+  margin-bottom: 48px;
+}
+.progress-bar{  
+  background:rgba(181,184,163,0.3);
+  padding: 15px;
+  box-sizing:border-box;
+}
+.bar{
+  width: 0;
+  height: 114px;
+  background: rgba(127,158,63,0.7);
+  float:left;
+  position: relative;
+  margin-right: 30px;
+}
+.bar:after{
+  content:'';  
+  position: absolute;
+  /* right: -20px; */
+  left:100%;
+  top: 12px;
+  border-style:solid;
+  border-width:8px 11px;
+  border-color:transparent transparent transparent rgba(127,158,63,0.7);
+}
+.progress-bar:after{
+  content:'';
+  display: block;
+  clear:both;
+}
+.progress-bar .info{
+  width: 250px;
+  float:left;
+}
+.progress-bar .info h3{
+  font-weight: bold;
+}
+/* .box {
+  width: 0;
+  height: 0;
+  border:20px solid red;
+  border-width:20px;
+  border-style:solid;
+  border-color:transparent blue blue transparent;
+} */
+
+/* freebie */
+.freebie{
+  text-align: center;
+  background: #2f2f2f;
+}
+.freebie h2{
+  color: #fff;
+  margin-bottom: 24px;
+}
+.freebie p{
+  width: 325px;
+  margin:0 auto;
+  color: #c3c3c3;
+  margin-bottom: 48px;
+}
+.freebie p em{
+  color: #f93f1c;
+}
+/* footer */
+footer {
+  text-align: center;
+}
+footer p:first-child{
+  width: 433px;
+  margin:0 auto 24px;
+  font-size: 24px;
+  line-height: 34px;
+  font-family: 'Gentium Basic', serif;
+}
+footer p:first-child a{
+  color: #f93f1c;
+}
+.sns {
+  word-spacing: 8px;
+  margin-bottom: 96px;
+}
+.sns a{
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background: #f93f1c;
+  color: #fff;
+  line-height: 48px;
+}
+.btt {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  line-height: 48px;
+  position: fixed;
+  right:50%;
+  margin-right:-500px;
+  bottom: 167px;
+  background: rgba(0,0,0,.2);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+.btt.active{
+  opacity: 1;
+  visibility: visible;
+}

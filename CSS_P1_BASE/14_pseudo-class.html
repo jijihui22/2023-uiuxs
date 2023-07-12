@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class Selector</title>
+    <style>
+        h1:hover{
+            background-color: silver;
+        }
+        :link{
+            font-size: 20px;
+        }
+        :visited{
+            color: antiquewhite;
+        }
+        a, input, button{
+            outline:none;
+        }
+        a:focus{
+            background-color:blue;
+            color:#fff
+        }
+        input:focus{
+            border-color:blue;
+        }
+        /* form:focus-within{
+            background-color:silver;
+        } */
+        form p:focus-within{
+            background-color:silver;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo-class Selector</h1>
+    <p>
+        <a href="http://www.naver.com">link</a>
+        <a href="http://www.apple.com">link2</a>
+    </p>
+    <form action="">
+        <p>
+            <label for="username">이름</label>
+            <input type="text" id="username">
+        </p>
+        <p>
+            <label for="input">이메일</label>
+            <input type="text" id="input">
+
+            <button>회원가입</button>
+        </p>
+        <input type="text">
+        <button>send</button>
+    </form>
+</body>
+
+</html>

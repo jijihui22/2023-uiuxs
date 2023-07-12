@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title> MixItUp</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<style>	
+		* { box-sizing:border-box;}
+		.mix-wrapper {
+			width: 80%;
+			margin:0 auto;
+		}
+		.mix-wrapper:after{
+			content:'';
+			display: block;
+			clear:both;
+		}
+		.mix{
+			width: 23%; 
+			margin:1em 1%;
+			background: #ccc;
+			float:left;
+			text-align: center;
+		}
+		.blue{
+			background: blue;
+			color: #fff;
+		}
+		.orange{
+			background: orange;
+		}
+		.black{
+			background: black;
+			color: #fff;
+		}
+		.green{
+			background: green;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container filter">
+		<button data-filter="all">All</button>
+		<button data-filter=".blue">blue</button>
+		<button data-filter=".orange">orange</button>
+		<button data-filter=".black">black</button>
+		<button data-filter=".green">green</button>
+	</div>
+	<form action="">
+		<input type="text">
+		<button>검색</button>
+	</form>
+
+	<!-- Demo content -->
+	<div class="mix-wrapper">
+		<div class="mix blue" data-order="1">
+			<h5>BOX 1</h5>
+			<h6>blue</h6>
+		</div>
+		<div class="mix orange" data-order="2">
+			<h5>BOX 2</h5>
+			<h6>orange 한글</h6>
+		</div>
+		<div class="mix black" data-order="3">
+			<h5>BOX 3</h5>
+			<h6>black</h6>
+		</div>
+		<div class="mix orange" data-order="4">
+			<h5>BOX 4</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix orange" data-order="5">
+			<h5>BOX 5</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix black" data-order="6">
+			<h5>BOX 6</h5>
+			<h6>black</h6>
+		</div>
+		<div class="mix black" data-order="7">
+			<h5>BOX 7</h5>
+			<h6>black</h6>
+		</div>
+		<div class="mix orange" data-order="8">
+			<h5>BOX 8</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix green" data-order="9">
+			<h5>BOX 9</h5>
+			<h6>green</h6>
+		</div>
+		<div class="mix green" data-order="10">
+			<h5>BOX 10</h5>
+			<h6>green</h6>
+		</div>
+		<div class="mix blue" data-order="11">
+			<h5>BOX 11</h5>
+			<h6>Blue</h6>
+		</div>
+		<div class="mix green" data-order="12">
+			<h5>BOX 12</h5>
+			<h6>green</h6>
+		</div>		
+	</div>
+	<!-- Add Bower components -->
+	<script>
+		let buttons = document.querySelectorAll('.filter button');
+		let item = document.querySelectorAll('.mix');
+		let itemTitles = document.querySelectorAll('.mix h6');
+		let myArr = [];
+		let counter = 0;
+		for(let itt of itemTitles){
+			myArr.push({
+				id:	counter++,
+				text: itt.textContent.toLowerCase()
+			})
+		}
+
+		console.log(myArr);
+
+		let form = document.querySelector('form');
+
+		form.addEventListener('submit',(e)=>{
+			e.preventDefault();
+			let target = e.target.querySelector('input').value;
+			myfilter(target);
+		});
+
+
+
+		for(let button of buttons){
+			button.addEventListener('click',(e)=>{
+				e.preventDefault();
+					let keyword = e.target.innerText;
+
+					myfilter(keyword);
+			});
+		}
+		
+		function myfilter(keyword){
+				keyword = keyword.toLowerCase();
+
+				if(keyword == 'all'){
+					for(let it of item){
+						it.style.display = 'block';
+					}
+				}else{
+					for(let it of item){
+						it.style.display = 'none';
+					}
+					let filteredArr = myArr.filter(el=>el.text.includes(keyword));
+					console.log(filteredArr);
+					// item[3].style.display = 'block';
+	
+					if(filteredArr.length > 0){
+							for(let fa of filteredArr){
+								item[fa.id].style.display = 'block';
+							}
+					}
+				}
+
+		}
+
+const ages = [32, 33, 16, 40];
+/*
+let result = ages.filter(function(age){
+	return age >= 18;
+});
+
+let result = ages.filter((age)=>{
+	return age >= 18;
+});*/
+let result = ages.filter(age=> age >= 18);
+
+console.log(itemTitles);
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

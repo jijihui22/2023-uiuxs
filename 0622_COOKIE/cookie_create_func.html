@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cookie create</title>
+  <script>
+    function setCookie(name,value,day){//쿠키 생성하는 함수
+      let date = new Date();;//자바스크립트 현재시간 불러오는 함수
+      date.setDate(date.getDate()+day);
+      let setCookie = '';
+      setCookie += `${name}=${value};`;
+      setCookie += `expires=${date.toUTCString()}`;
+      document.cookie = setCookie;//쿠키에 넣기
+    }
+  </script>
+</head>
+<body>
+  <h1>cookie</h1>
+  <button id="cookie">쿠키생성</button>
+  <script>
+    let btn = document.querySelector('#cookie');
+    btn.addEventListener('click',()=>{//setCookie값 넣고 나오나 보자
+      setCookie('ABC','home',7);
+    });
+  </script>
+</body>
+</html>

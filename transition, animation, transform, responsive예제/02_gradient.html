@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            margin: 2rem auto;
+        }
+        .linear1{
+            /* background:linear-gradient(방향 색상 위치 색상 위치); */
+            /* background:linear-gradient(45deg, #000 0%, #fff 100%); 대각선 같은 각도 일 때 */
+            background:linear-gradient(#000, #fff, );
+            /* background:linear-gradient(기본방향이 to bottom 생략가능, #000, #fff두가지만 있으면 퍼센 */
+            /* 트 생략가능, 처음과 두번째 색깔이 같아도 생략 가능); */
+            /* background:linear-gradient(to bottom, #2989cc 0%, #fff 50%, */
+             /* #906a00 50%, #fff 100%); */
+            /* linear-gradient(to bottom, #906a00 0% #fff 100%); */
+            background:linear-gradient(#00f 20%, #fff 20%, #fff 80%, #00f 80%)
+        }
+        .linear2{
+            height:200px;
+            /* background:radial-gradient(모형 중심점 좌표, 색상 위치, 색상 위치) 
+            - closest-side : 원형 그래디언트의 크기가 가장 가까운 면에 닿을 만큼의 크기로 설정됩니다.
+            - farthest-side : 원형 그래디언트의 크기가 가장 먼 면에 닿을 만큼의 크기로 설정됩니다. 
+            따라서 가까운 면에서는 그래디언트의 일부분이 화면을 넘을 것입니다.
+            - closest-corner : 원형 그래디언트의 크기가 가장 가까운 모서리에 닿을 만큼의 크기로 설정됩니다.
+            - farthest-corner : 원형 그래디언트의 크기가 가장 먼 모서리에 닿을 만큼의 크기로 설정됩니다.
+            이 크기가 기본 설정이며, 가까운 모서리에서는 그래디언트의 일부분이 화면을 넘을 것입니다.*/
+            background:radial-gradient(circle farthest-side at 50px 50px, #000 0%, #fff 100%);
+        }
+        .radial{
+            background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gradient</h1>
+    <div class="box linear1">linear gradient</div>
+    <div class="box linear2">Radial gradient</div>
+    <div class="box radial">Radial gradient</div>
+</body>
+
+</html>

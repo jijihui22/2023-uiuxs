@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=index.html, initial-scale=1.0">
+  <title>sign_up - Acme</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/default.css">
+</head>
+<body class="about">
+  <header class="sm-pd">
+    <div class="container cf">
+      <h1>
+        <a href="">acme</a>
+      </h1>
+      <nav>
+        <ul class="cf">
+          <li>
+            <!-- <img src="" alt="">
+            <p></p>
+            <a href=""></a> 있어보이게 바꾸면 아래다-->
+            <a href="">home</a><span class="light-g2">/</span><a href="">about</a>
+          </li>
+          <li>
+            <a href="sign_in.html" class="btn light-g1-bg light-g3"><i class="fa-solid fa-lock"></i>Sign in</a>
+          </li>
+          <li>
+            <a href="sign_up.html" class="btn highlight-bg secondary">sign up for free</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="banner banner-bg big-top-pd">
+    <h2 class="main-tt">sign_up</h2>
+    <form action="" novalidate><!-- novalidate는 required를 끄기-->
+      <div class="field cf">
+        <label for="useremail" class="hidden">Name</label>
+        <i class="fa-solid fa-lock"></i>
+        <input type="text" id="username" placeholder="Name"required>
+      </div>
+      <div class="field cf">
+        <label for="useremail" class="hidden">User Email</label>
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="useremail" placeholder="Email address" required><!-- required 입력하면 html에 입력안된곳이 있으면 alert띄워주는 기능을 한다
+        이걸하면 script보다 먼저 작동한다 근데 이 문구는 변경 못함-->
+      </div>
+      <div class="field cf">
+        <label for="userpw" class="hidden">User Password</label>
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="userpw" placeholder="password"required>
+      </div>
+      <div class="field cf">
+        <label for="userpwcf" class="hidden">Confirm Password confirm</label>
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="userpwcf" placeholder="Password Confirm"required>
+      </div>
+      <input type="submit" value="create account" class="button">      
+      <div class="feedback">
+        <p>
+          Oops, it seems you haven't
+        </p>
+        <p>
+          entered your name yet.
+        </p>
+        <br>
+        <p>
+          This is required.
+        </p>
+      </div>
+    </form> 
+  </section>
+  <footer class="big-pd">
+    <a href="sign_up.html" class="link highlight">Already have an account? Sign in</a>
+  </footer> 
+  <script src="js/main.js"></script> 
+</body>
+</html>

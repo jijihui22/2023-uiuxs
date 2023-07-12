@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .rate{
+      height: 25px;
+      position: relative;
+      border: 2px solid #ccc;
+    }
+    .rate span{
+      position: absolute;
+      right: 20px;top: 0;bottom: 0;line-height: 25px;
+      font-weight: bold;
+    }
+    .rate .bar{
+      position: absolute;
+      left: 0;top: 0;bottom: 0;
+      width: 0;
+      background: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <div class="rate" data-num="">
+    <span></span>
+    <div class="bar"></div>
+  </div>
+</body>
+</html>

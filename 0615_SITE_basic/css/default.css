@@ -1,0 +1,149 @@
+body{
+  padding-top: 108px;
+  z-index: 0;
+  transition:0.3s
+}
+body.sticky{
+  padding-top: 82;
+}
+/* Header */
+header{
+  background-color:#fff;
+  box-shadow: 0 5px 3px rgba(0,0,0,.1);
+  transition:padding 0.3s;
+  position: fixed;
+  left: 0;right: 0;top: 0;
+  z-index: 1;
+}
+.sticky header{
+  padding: 15px 0;
+}
+header h1 {
+  float: left;
+}
+header nav {
+  float: right;
+  padding: 7.5px 0;
+}
+header nav li {
+  float: left;
+  margin-left: 10px;
+}
+header nav li:first-child{
+  margin-right: 20px;
+  line-height: 39px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+header nav li:first-child span{
+  margin:0 10px;
+}
+header h1 a{
+  width: 161px;
+  height: 54px;
+  background: url(../images/logo.png) no-repeat;
+  display: block;
+  text-indent: -9999em;
+}
+header .btn i{
+  margin-right: 10px;
+}
+/* Main Page */
+.banner{
+  text-align: center;
+}
+.banner .main-tt{
+  margin-bottom: 27px;
+}
+.banner .content-tt{
+  margin-bottom: 54px;
+  color: #fff;
+}
+.banner img{
+  display: block;
+  width: 1076px;/* 자기크기를 아니까 내가 여백을 어떻게 주는지 앎 */
+  /* text-align: center;시작과 종료가 있고 컨텐트 있는것들만 중간으로 */
+  margin:44px auto 0;
+}
+
+.feature_list li{
+  width: 408px;
+  float: left;
+  text-align: center;
+  margin-right: 24px;
+}
+.feature_list li:last-child {
+  margin-right: 0;
+}
+.feature_list li .circle{
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border:1px solid #439ccf;
+  box-sizing: border-box;
+  margin:0 auto 27px;
+  line-height: 106px;
+  color: #439ccf;
+  font-size: 32px;
+}
+.feature_list li h3{
+  font-size: 24px;
+  margin-bottom: 27px;
+}
+.testimonial {
+  padding-top: 75px;
+  position: relative;/* 다겹친다 */
+  height: 114px;
+  overflow: hidden;
+}
+.testimonial ul{
+  width: 100%;
+  height: 114px;
+  position: absolute;
+  left: 0;
+  transition:0.3s;/* ul이 움직이기 때문에 여기 transition */
+}
+.testimonial ul li{
+  width: 100%;/* absolute는 너비 안주면 content너비니까 가로  준다 */
+  height: 100%;
+  top: 0;
+  position: absolute;
+  text-align: center;
+  color: #489dcd;
+}
+.testimonial ul li blockquote{
+  font-size: 24px;
+  line-height: 34px;
+  font-style: italic;
+  width: 65%;
+  margin:0 auto;
+}
+.testimonial > a{
+  position: absolute;
+  font-size: 45px;
+  color: #ebebeb;
+  top:50%;
+  transform:translateY(-50%);
+}
+.testimonial > .prev{
+  left: 0;
+}
+.testimonial > .next{
+  right: 0;
+}
+
+footer{
+  text-align: center;
+}
+footer .cta{
+  background: #292c2e;
+  color: #fff;
+}
+.cta .content-desc{
+  color: #a8a8a8;
+  margin:27px 0 54px;
+}
+.copyright p:first-child{
+  margin-bottom: 27px;
+}

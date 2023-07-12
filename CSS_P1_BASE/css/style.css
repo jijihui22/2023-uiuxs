@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul li a{
+  background-image:url(../img/tab_sprites.gif);
+  width:108px;
+  height:32px;
+  display:block;
+  text-indent:-100px;
+  background-repeat:no-repeat;
+}
+li:nth-child(1) a{
+  background-position:0px 0;
+}
+li:nth-child(2) a{
+  background-position: -107px 0;
+}
+li:nth-child(3) a{
+  background-position: -214px 0;
+}
+/* li:nth-child(1) a:hover{
+  background-position:0 100%;
+}
+li:nth-child(2) a:hover{
+  background-position:-107px 100%;
+}
+li:nth-child(3) a:hover{
+  background-position:-214px 100%;
+} */
+li:nth-child(n) a:hover{
+  background-position-y: 100%;
+}
+.bird{
+  width:135px;
+  height:135px;
+  background-image:url(../img/naver.png);
+  background-repeat:no-repeat;
+  display:block;
+  background-position:0 0;
+  text-indent:-10000px
+}
+.note{
+  width:52px;
+  height:52px;
+  background-image:url(../img/naver.png);
+  display:block;
+  background-position:-727px -108px;
+  text-indent:-100px
+}
+.note:hover{
+  /* background-position:-727px 160px; */
+  background-position-y:-160px;
+}

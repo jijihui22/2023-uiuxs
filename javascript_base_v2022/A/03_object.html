@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <script>
+        /*
+        객체(object) = 변수(perperty) 
+
+        새 객체를 생성
+        var 객체명 = {} // 빈객체를 생성
+        객체명.변수명 = 값
+        
+        객체 생성과 동시에 값을 할당
+
+        var 객체명 = {변수:값, 변수:값} console과 같이 생긴 형식
+        */
+        /*
+               var s1 = {}
+       s1.kor = 21;
+       s1.b = 3;
+       s1.a = 5;
+
+       console.log(s1)
+       console.log(s1.a)
+        */
+        var s1 = {
+            kor:12,
+            avh:11,
+            bdf:299,
+            total:function(){
+            var sum = this.kor + this.avh + this.bdf
+            return sum
+        }
+    }
+    console.log(s1.total())
+        
+
+
+    </script>
+</body>
+
+</html>

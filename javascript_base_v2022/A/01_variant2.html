@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>산술 연산자 - 자바스크립트 기초</title>
+    <meta name="description" content="">
+    <meta name="author" content="user1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>연산자</h1>
+    <h2>산술 연산자</h2>
+    <script>
+        var num1 = 100;
+        var num2 = 30;
+        console.log(num1+num2);
+        console.log(num1-num2);
+        console.log(num1*num2);
+        console.log(num1/num2);
+        console.log(num1%num2);
+        console.log(5%5);
+        console.log(5%2);
+    </script>
+    <h3>문자열 더하기</h3>
+    <script>
+        var str1 = '자바 스크립트';
+        var str2 = '기초';
+        console.log(str1+str2);
+        console.log(10+20);
+        console.log("문자"+20);
+        console.log("문자"+20+30); //문자가 앞에 있어서 데이터 타잎으로 바뀐다
+        console.log(10+'문자');
+        console.log(10+'20'); //뒤에가 문자로 연산x
+        console.log(10*'20'); //덧샘이외에는 연산됨
+        console.log(10/'20');
+        console.log(10-'20');
+    </script>
+    <h3>증감 연산자</h3>
+    <script>
+        var i = 1;
+        // i = i + 1;
+        // i++ 뒤에변경 후치
+        // ++i 앞에변경 전치 일단 변경먼저하고 실행된다
+        console.log(i++) //실행되는 시점에서 변함이 없다 
+        console.log(i) //그 다음부터는 변함
+        console.log(i)
+    </script>
+    <h3>복합대입연산자</h3>
+    <script>
+        var a = 10;
+        a = a + 10;
+        a = a * 2;
+        a*=2
+        console.log(a)
+    </script>
+
+
+</body>
+
+</html>

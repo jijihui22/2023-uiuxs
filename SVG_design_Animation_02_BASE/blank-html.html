@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>SVG Loader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <defs>
+        <style>
+            .st0, .body{fill:#FFFFFF;transition: 0.3s;}
+            .st1{fill:#D1D3D4;}
+            #details .st2 {fill:none;}
+            .st2, .body{fill:#FFFFFF;stroke:#D1D3D4;stroke-width:8;stroke-miterlimit:10;}
+            .st3{fill:none;stroke:#D1D3D4;stroke-width:8;stroke-miterlimit:10;}
+
+
+            @media screen and (max-width:150px){/* svg 150px에서 작동하는 CSS */
+            #details {display:none;}
+            }
+            #icon:hover circle,  
+            #icon:hover .body{
+            fill:#262262;
+            stroke:#fff;
+            }
+            #icon:hover #container .st1{
+            fill:#fff;
+            }
+  </style>
+    </defs>
+<script>
+    let icon = document.querySelector('#icon');
+    icon.addEventListener('click', ()=>{
+        icon.classList.toggle('active');
+    })
+</script>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="magnifier.svg" alt="magnifier">
+    </div>
+    <div class="wrapper">
+        <object>
+            <embed src="magnifier.svg" alt="magnifier" type="">
+        </object>
+    </div>
+</body>
+</html>

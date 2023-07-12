@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>function - javascript Basic</title>
+</head>
+
+<body>
+    <h1>함수</h1>
+    <script>
+        /*
+            새함수를 생성
+            function 함수명() { 할일}
+
+            함수실행
+            함수명()
+        */
+       function send(){
+        // alert('경고')
+       }
+
+       send();
+    </script>
+    <hr>
+    <h2>함수의 구조</h2>
+    <script>
+        /*
+            입력, 할일, 출력
+            function 함수명(파라미터) { 할일 }
+
+            함수명(10); 10 = 인수
+        */
+       function greetion(msg){ //msg parameter 매개변수
+        // alert(msg)
+    }
+    greetion('반갑습니다'); //argument 인수, 전달인자
+    
+        let rusulf = add(10, 20, 30);//이름이 있는 함수는 호이스팅 hoisting가능 다른말로 끌올 선언 후 함수가 어디서든 선언해도 된다.
+        console.log(rusulf)
+    
+       function add(a, b){//입력값 a,b
+       var sum = a+b; // 할일 덧셈
+       return sum; //납품, 출력
+       }
+       document.querySelector
+
+       //변수의 호이스팅
+    //    console.log(num)//hoisting되었지만 같이 저장x
+    //    var num = 5;
+
+       {
+        //    console.log(num2)
+        // let num2 = 5;
+       }
+       {
+        // console.log(num3) // const(변경 불가) no initialization
+        const num3 = 3;
+        num3 = 5;
+       }
+    </script>
+    <hr>
+    <h3>익명함수</h3>
+    <script>
+        //익명함수는 hositing x
+        var sum = function(x,y){
+            var z = x + y
+            return z;
+        }
+        console.log(sum(10, 20));
+        console.log(sum(10, 20));
+    </script>
+    <h3>즉시 실행 함수</h3>
+    <script>
+        /*
+            (function(매개변수){
+
+            })(인수);
+        */
+        let result2 = (function(a, b){
+            return a+b;
+        })(10, 30);//사용시 변수지정은 해야함
+        document.write(result2);
+    </script>
+</body>
+
+</html>

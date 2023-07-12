@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child Selector</title>
+    <style>
+        li:nth-child(1){
+            text-decoration:underline;
+        }
+        div:nth-child(2){
+            background-color:silver
+        }
+        li:nth-child(1),
+        li:nth-child(5){
+            background-color:silver
+        }
+        li:last-child{
+            text-decoration:underline;
+        }
+        /* p a:nth-child(2n){
+            background-color:silver
+        } */
+        /* p a:nth-child(2n+1){
+            text-decoration:underline;
+        } */
+        /* p a:nth-child(even){
+            background-color:silver
+        }
+        p a:nth-child(odd){
+            text-decoration:underline;
+        } */
+        /* section p:nth-child(n+3){
+            background-color: silver;
+        } */
+        /* section p:nth-child(-n+5){
+            background-color: silver;
+        } */
+        section p:nth-child(n+2):nth-child(-n+5){
+            background-color: silver;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <section>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+        <div>content</div>
+    </section>
+    <hr>
+    <p>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+        <a href="">link</a>
+    </p>
+    <section>
+        <p>paragraph</p>
+        <p>paragraph</p>
+        <p>paragraph</p>
+        <p>paragraph</p>
+        <p>paragraph</p>
+        <p>paragraph</p>
+        <p>paragraph</p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cookie delete</title>
+  <script>
+    function cookieDel(){
+      let date = new Date();//자바스크립트 현재시간 불러오는 함수
+      date.setDate(date.getDate()-1);    
+      let setCookie = '';
+      setCookie += 'ABC=home;';
+      setCookie += 'expires='+ date.toUTCString();
+      document.cookie = setCookie;
+    }
+    let today = new Date();
+    console.log(today);
+    console.log(today.toString());
+    console.log(today.toDateString());
+    console.log(today.toTimeString());
+    console.log(today.toUTCString());
+  </script>
+</head>
+<body>
+  <h1>cookie</h1>
+  <button id="del">쿠키삭제</button>
+  <script>
+    let btn = document.querySelector('#del');
+    btn.addEventListener('click',cookieDel);
+  </script>
+</body>
+</html>

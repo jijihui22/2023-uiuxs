@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@1&family=Bentham&family=PT+Serif:ital@0;1&display=swap');
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;  
+    /* 16px */
+    font: inherit;
+    vertical-align: baseline;
+     /* 가로줄 맞추는 거 */
+  }
+  HTML5 display-role reset for older browsers 
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block; 
+  }
+  body {
+    line-height: 1; 
+    /* font-size의 100%   */
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none; 
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after { 
+  content: '';
+  content: none;
+  /* blockquote은 공백, q는 ""없애줌 */
+}
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  } 
+  /* 이렇게할시 핸드폰 기종에따라 다르게 나오긴 함 */
+  
+a{
+  text-decoration: none;
+  color: #000;
+}
+/* LAYOUT */
+
+/* FONT */
+body{
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
+  color: #6f6f6f;
+}
+/* LINK & BUTTONS */
+
+/* HEADER */
+header{
+  /* background-image:url(images/header_bg.jpg); */
+  /* background-repeat: ; */
+   height:600px;
+  /*background-position:50% 0; */
+  /* background-size:cover; */
+  background: url(images/header_bg.jpg) no-repeat 50% 0/cover;
+  position:relative;
+  z-index: 1;
+  padding-top: 60px;
+  box-sizing:border-box;
+  text-align: center; 
+}
+header:after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background:rgba(0, 0, 0, .5); 
+  z-index: -1;
+}
+header *{
+  color: aliceblue;
+}
+/* MAIN */
+main{
+  max-width:640px;
+  margin: auto;
+  padding: 98px 0 110px;
+}
+main h2{
+  font-size:42px
+}
+header h1{
+  text-transform: uppercase;
+  border:1px solid #fff;
+  display: inline;
+  line-height:51px;
+  letter-spacing: 0.12em;
+  padding: 0 20px;
+}
+header h2{
+  font-size:60px;
+  max-width:660px;
+  margin: 123px auto 23px;
+}
+header h2 span{
+  font-family: 'Libre Baskerville', serif;
+  font-style:italic;
+}
+header p{
+  font-size: 20px;
+  letter-spacing:0.04em;
+  font-style:italic;
+}
+h2, h3, h5{
+  font-family: 'Bentham', serif;
+  letter-spacing:0.08em;
+}
+main h2, h3{
+  text-align: center;
+  color: #444;
+}
+main h2{
+  font-size: 42px;
+  line-height: 50px;
+  margin-bottom: 26px;
+}
+main h3{
+  font-family: 'PT Serif', serif;
+}
+main p{
+  font-size:18px;
+  line-height:34px;
+  color:#6f6f6f;
+  margin-bottom: 34px;
+}
+h3, main p:after{
+  margin-bottom:48px;
+}
+main .sharing{
+  border:1px solid #838383;
+}
+main em{
+  color:#e3514e;
+}
+.sharing:after{
+  content:"";
+  clear:both;
+  display: block;
+}
+.sharing li{
+  float:left;
+  box-sizing: border-box;
+  width:25%;
+  text-align: center;
+  line-height:52px;
+  font-size: 16px;
+  text-transform:uppercase;
+  color:#555;
+  border-right: 1px solid #555;
+}
+.sharing li a{
+  color:#555
+}
+.sharing li:last-child{
+  border-right:none;
+}
+.sharing li:hover a{
+  display: block;
+  background-color: #e3514e;
+  color: #fff;
+}
+footer{
+  line-height:66px;
+  background-color:#555;
+  font-size:14px;
+  margin:0 auto;
+  text-align:center;
+  color:#fff;
+}
+/* FOOTER */
+/* font-family: 'Baskervville', serif;
+  font-family: 'Bentham', serif;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'PT Serif', serif;  */

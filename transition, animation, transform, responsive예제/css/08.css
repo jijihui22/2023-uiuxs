@@ -1,0 +1,79 @@
+*{
+    margin:0; padding:0;
+}
+li{
+    list-style: none;
+}
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 60px;
+    background:#fff;
+    box-shadow:0 0 5px rgba(0,0,0,.25);
+    z-index:100;
+}
+body{
+    padding-top: 60px;
+}
+
+main{
+    padding: 2rem;
+}
+section{
+    margin:2rem 0;
+}
+section p{
+    margin:1rem 0;
+}
+aside{
+    background: rgba(0,0,0,.8);
+    padding: 5rem 1.5rem 0;
+    width: 250px;
+}
+aside h2 {
+    color:#fff;
+    margin-bottom: 1rem;
+}
+aside ul li {
+    margin-bottom:1rem;
+    border-bottom:1px solid #999;
+    padding-bottom:1rem;
+}
+aside a{
+    color:#fff;
+    text-decoration: none;
+}
+/* Aside Menu Animation */
+header label i{
+    margin: 20px 0 0 20px;
+}
+header label i:last-child{
+    display:none;
+}
+#toggle{
+    display: none;
+}  
+#toggle:checked + header label i:first-child{
+    display:none;
+}
+#toggle:checked + header label i:first-child:checked aside{
+    transition:0.3s;
+    transform:translateX(100%)
+}
+#toggle:checked + header label i:last-child{
+    display:block;
+}
+/* 라벨을 클릭하면 (input에 체크되면) 그뒤 안보이면 아이콘이 보이고, 보이던 아이콘이 안보이도록 */
+aside{
+    transform:translateX(-100%);
+    position:fixed;
+    height: 100%;
+    
+}
+#toggle:checked ~ aside{
+    transition:0.3s;
+    transform:translateX(0);
+}
+/* transform 으로 왼쪽으로 배치 토글 버튼을 클릭하면 안쪽으로 들어오도록 시간 0.3s */

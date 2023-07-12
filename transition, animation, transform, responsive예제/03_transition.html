@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        div{
+            height: 200px;
+            background: green;
+            transition:0.3s ease;
+        }
+        div:hover{
+            background: blue;
+        }
+        div img {
+            /* width: 200px; */
+            /* opacity: 0.2; */
+            display: none;
+            /* transition-property: width opacity; */
+            /* transition-duration: 0.3s; */
+            /* transition-delay:0; */
+            /* transition-timing-function:ease 기본값ease 
+            ease 천천히 시작 그다음 빠르다 마지막엔 느려짐
+            ease-in 전환표과가 
+            ease-out ; */
+            /* transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); */
+            /* 줄여쓸때 먼저 시간나오고 delay  나와야 한다. */
+            /* all 바뀌는 건 다 뒤에처럼 해줘요 아니면 다 ,로 구분해야 된다 생략 가능*/
+            transition:.3s ease;
+
+        }
+
+        div:hover img {
+            /* width: 400px;
+            opacity: 1; */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="imgs/sample1.jpg" alt="">
+    </div>
+</body>
+
+</html>

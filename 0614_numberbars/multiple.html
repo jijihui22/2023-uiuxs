@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Animation</title>
+  <style>
+    .rate{
+      height: 25px;
+      position: relative;
+      border:2px solid #ccc;
+    }
+    .rate .bar{
+      position: absolute;
+      left: 0;top: 0;bottom: 0;
+      width: 0;
+      background: #3498db;
+    }
+    .rate span{
+      position: absolute;
+      right: 20px; top: 0; bottom: 0; line-height: 25px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="rate" data-num="45">
+    <div class="bar"></div>
+    <span>0</span>
+  </div>
+  <div class="rate" data-num="75">
+    <div class="bar"></div>
+    <span>0</span>
+  </div>
+  <div class="rate" data-num="25">
+    <div class="bar"></div>
+    <span>0</span>
+  </div>
+  <script>
+    let rate = document.querySelectorAll('.rate');
+     
+      /*
+      rate들 각 요소 마다 할일
+        변수명 targetNum 지정
+        변수명 span
+        변수명 bar
+        변수명 num각숫자마다시작할초기넘버
+      */
+        for(let r of rate){ //변수가 여러개를 r당 반복이라 하나씩 나옴
+          let targetNum = Number(r.dataset.num);
+          let span = r.querySelector('span');
+          let bar = r.querySelector('.bar');
+          let num = 0; 
+          
+          
+          let animation = setInterval(()=>{
+          span.innerText = ++num;//*****
+            if(num == targetNum){//===는 안됨 data-num="45"에서 45는 문자다!!
+              clearInterval(animation);
+            }
+
+            //bar의 너비를 변경
+            bar.style.width = `${num}%`//***% 단위 줘야한다
+        }, 10)
+        }
+      
+
+  </script>
+</body>
+</html>

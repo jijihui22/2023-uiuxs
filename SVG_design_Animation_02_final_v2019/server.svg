@@ -1,0 +1,32 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="234px"
+	 height="234px" viewBox="0 0 234 234" style="enable-background:new 0 0 234 234;" xml:space="preserve" id="icon">
+<style type="text/css">
+
+	.st0{fill:none;stroke:#D1D3D4;stroke-width:8;stroke-miterlimit:10; transition:0.4s;}
+	.st1{fill:#FFFFFF;stroke:#D1D3D4;stroke-width:8;stroke-miterlimit:10; transition:0.4s;}
+
+	@media screen and (max-width:200px){
+		#details { display:none;}
+	}	
+	svg:hover .st1, svg:hover .st0{
+		fill:#262262;
+		stroke:#ffffff;
+	}
+</style>
+<g id="shape">
+	<circle class="st1" cx="117" cy="116.833" r="108"/>
+	<g>
+		<path class="st1" d="M178,74.833c0,6.627-5.373,12-12,12H68c-6.627,0-12-5.373-12-12v-13c0-6.627,5.373-12,12-12h98
+			c6.627,0,12,5.373,12,12V74.833z"/>
+		<path class="st1" d="M178,123.833c0,6.627-5.373,12-12,12H68c-6.627,0-12-5.373-12-12v-13c0-6.627,5.373-12,12-12h98
+			c6.627,0,12,5.373,12,12V123.833z"/>
+		<path class="st1" d="M178,172.833c0,6.627-5.373,12-12,12H68c-6.627,0-12-5.373-12-12v-13c0-6.627,5.373-12,12-12h98
+			c6.627,0,12,5.373,12,12V172.833z"/>
+	</g>
+</g>
+<g id="details">
+	<line class="st0" x1="159" y1="68.833" x2="89" y2="68.833"/>
+	<line class="st0" x1="159" y1="117.833" x2="89" y2="117.833"/>
+	<line class="st0" x1="159" y1="166.833" x2="89" y2="166.833"/>
+</g>
+</svg>
