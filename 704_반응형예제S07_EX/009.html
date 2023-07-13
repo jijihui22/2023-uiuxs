@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<title>Responsible Layout example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{margin: 0; padding: 0;}
+	body,h1,h2,h3,h4{font-family: verdana,sans-serif; font-size: 12px;}
+	li{list-style: none;}
+	#header{background-color: red; line-height: 40px;}
+	#wrap{width: 960px; margin: 0 auto;}
+	#container:after{content: ''; display: block; clear: both;}
+	.nav{float: left; width: 200px;}
+	.nav a{display: block; background: yellow; border: 3px solid brown; padding: 10px;}
+	#aside{margin-left: 220px; background-color: green;}
+	#content{margin-left: 220px; background-color: lime;}
+	#footer{margin-top: 30px; background-color: silver; line-height: 30px;}
+
+	@media screen and (min-width: 481px) and (max-width: 960px) {
+		#wrap{
+			width: 100%;
+		}
+		.nav{
+			float: none;
+			width: 100%;
+		}
+		.nav li{
+			float: left;
+			width: 25%;
+		}
+		#content{
+			float: right;
+			width: 68%;
+			margin-left: 0;
+		}
+		#aside{
+			float: left;
+			width: 30%;
+			margin-left: 0;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		#wrap{
+			width: 100%;
+		}
+		.nav{
+			float: none;
+			width: 100%;
+		}
+		.nav li{
+			float: left;
+			width: 25%;
+		}
+		#content{
+			width: 100%;
+			margin-left: 0;
+		}
+		#aside{
+			width: 100%;
+			margin-left: 0;
+		}
+	}	
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header">
+		<h1>Layout example</h1>
+	</header>
+
+	<div id="container">
+		<nav class="nav">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+		</nav>		
+
+		<section id="content">
+			<h1>Content area</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dolores, iste, expedita necessitatibus dolor quos facere beatae voluptas deserunt eum commodi quisquam aperiam itaque quae labore error suscipit consequuntur magni incidunt accusantium rerum nisi explicabo illum! Eveniet, dignissimos, atque, vel voluptas voluptatem minima ipsum tenetur laboriosam quas recusandae animi illum iure cumque deleniti optio quod veniam excepturi architecto doloremque dolorum pariatur aspernatur rerum quia? Delectus, nesciunt quis vero ab modi necessitatibus atque sint nobis! Neque, temporibus, quibusdam maxime consequuntur animi alias rerum doloremque porro id provident itaque eius vel fuga repellendus odit sit veniam atque vero inventore ex? Est, quis.</p>
+		</section>
+
+		<aside id="aside">
+			<h1>Aside area</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, rerum culpa labore repudiandae deserunt nisi quasi ratione asperiores corporis itaque.</p>
+		</aside>	
+	</div><!-- //container -->
+
+	<footer id="footer">
+		<p>Copyright &copy; 2014</p>
+	</footer>	
+</div><!-- //wrap -->
+
+</body>
+</html>

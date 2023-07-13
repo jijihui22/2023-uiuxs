@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans";
+  line-height: 1.618em;
+  color: #444;
+  overflow-y: scroll;
+}
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;  
+}
+.perspective{
+  perspective: 2000px;
+  perspective-origin: 50% -350px;
+}
+.perspective label{
+  display: inline-block;
+  margin: 0 auto;
+  background: #3980b9;
+  color: #fff;
+  border-radius: 10px;
+  padding: 5px 16px;
+}
+.perspective input{
+  display: none;
+}
+.perspective input:checked + label {
+  background: #3498db;
+}
+.perspective #rotate:checked ~ .cube{
+  animation: rotate 10s infinite linear;
+}
+.perspective #front:checked ~ .cube{
+  transform: none;
+  animation: none;
+}
+.perspective #left:checked ~ .cube{
+  transform: rotateY(90deg);
+  animation: none;
+}
+.perspective #right:checked ~ .cube{
+  transform: rotateY(-90deg);
+  animation: none;
+}
+.perspective #top:checked ~ .cube{
+  transform: rotateX(-90deg);
+  animation: none;
+}
+.perspective #bottom:checked ~ .cube{
+  transform: rotateX(90deg) ;
+  animation: none;
+}
+.perspective #back:checked ~ .cube{
+  transform: rotateY(180deg) ;
+  animation: none;
+}
+.cube{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin:4rem auto;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  /* animation: rotate 10s infinite linear; */
+  transition: 0.4s;
+}
+/*10초 무한 반복 rotate linear등속 */
+@keyframes rotate{
+  0%{
+    transform: rotatey(0);
+  }
+  100%{
+    transform: rotatey(360deg);
+  }
+}
+.cube div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+.cube img{
+  width: 100%;
+  height: 100%;
+}
+
+.front{
+  transform: translateZ(200px);
+}
+.back{
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.left{
+  transform: rotateY(-90deg) translateZ(200px);
+}
+.right{
+  transform: rotateY(90deg) translateZ(200px);
+}
+.top{
+  transform: rotateX(90deg) translateZ(200px);
+}
+.bottom{
+  transform: rotateX(-90deg) translateZ(200px);
+}

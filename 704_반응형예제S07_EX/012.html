@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<title>min-device-pixel-ratio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{margin: 0; padding: 0;}
+	body,h1,h2,h3,h4{font-family: verdana,sans-serif; font-size: 12px;}
+	li{list-style: none;}
+	
+	.photo{
+		width: 240px;
+		height: 200px;
+		background-image: url(img/photo-240.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		text-indent: -9999em;
+	}
+	@media screen and (-webkit-min-device-pixel-ratio: 2) {
+		.photo{
+			background-image: url(img/photo-480.png);
+		}
+	}
+</style>
+</head>
+
+<body>
+
+<p class="photo">photo example</p>
+
+</body>
+</html>

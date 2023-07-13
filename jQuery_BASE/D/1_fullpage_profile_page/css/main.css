@@ -1,0 +1,233 @@
+/* CSS Reset */
+h1,h2,h3,h4,h5,ul,li,p{
+    margin:0;
+    padding: 0;
+    font-weight: normal;
+    line-height: 1;
+}
+.hidden{
+    display: none;
+}
+
+/* layout */
+.content {
+    width: 80%;
+    margin:3rem auto;
+    display: flex;
+    justify-content: center;
+}
+.sec-tt{
+    text-align: center;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 30px;
+    position:relative;
+}
+.sec-tt:before{
+    content:'- ';
+}
+.sec-tt:after{
+    content:' -';
+}
+
+/* profile */
+.profile {
+    background: #7bb8e1;
+}
+.custom-shape-divider-bottom-1638201791 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1638201791 svg {
+    position: relative;
+    display: block;
+    width: calc(143% + 1.3px);
+    height: 137px;
+}
+
+.custom-shape-divider-bottom-1638201791 .shape-fill {
+    fill: #FFFFFF;
+}
+.profile .content{
+    align-items: center;
+}
+.content .user{
+    text-align: center;
+    width: 30%;
+}
+.content .user h1{
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.3;
+}
+.content .user h2{
+    font-size: 1.1em;
+    line-height: 1.2;
+}
+.content .user h3{
+    font-size: 1em;
+    margin:12px 0;
+}
+.profile .info{
+    width: 50%;
+}
+.info ul {
+    list-style: none;    
+}
+.info ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 0.8em;
+}
+.info ul li:nth-child(odd){
+    background: #F1F5F9;
+    border-radius:10px;
+    
+}
+.info ul li h3{
+    font-weight: bold;
+}
+
+
+/* chart */
+
+.charts .chart{
+    margin:0 20px;
+    position: relative;
+}
+.charts .chart h2{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform:translate(-50%,-50%);
+    margin: 0;
+}
+.charts .chart h3{
+    font-weight: bold;    
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform:translateX(-50%);
+    margin: 0;    
+    color:#444;
+}
+.charts .chart svg{
+    width: 220px;
+    height: 220px;
+}
+circle{
+    fill:#ebebeb;
+    stroke-width:20;
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    /* animation:line 2s forwards; */
+    transform:rotate(-90deg);
+    transform-origin:50% 50%;
+    stroke-linecap:round;
+}
+/* @keyframes line {
+    from {stroke-dashoffset: 628;}
+    to {stroke-dashoffset: 0;}
+} */
+.charts .chart:nth-child(1) circle{
+    stroke:#ffc114;
+}
+.charts .chart:nth-child(2) circle{
+    stroke:#ff5248;
+}
+.charts .chart:nth-child(3) circle{
+    stroke:#19cdca;
+}
+.charts .chart:nth-child(4) circle{
+    stroke:#4e88e1;
+}
+
+/* form */
+.contact {
+    background: #3498db;
+}
+.contact .content{
+    flex-direction: column;
+    text-align: center;
+}
+.contact .sec-tt{
+    color: #fff;
+}
+.contact form{
+    width: 60%;
+    margin:0 auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+.contact form fieldset{
+    border:none;
+}
+.contact form legend{
+    display: none;
+}
+.contact form .field{
+    display: flex;
+    justify-content: space-between;
+    
+    margin:20px 0;
+}
+.contact form .field label{
+    display: none;
+}
+.contact form .field input,
+.contact form .field select{
+    width: 100%;
+    border:none;
+    line-height: 40px;
+}
+.contact form .field input,
+.contact form .field select,
+.contact form .field textarea{
+    padding:5px 10px;
+    border:1px solid #ebebeb;
+    border-radius:3px;
+}
+
+.contact form .field input:focus,
+.contact form .field textarea:focus{
+    outline:none;    
+    border-color:#19CDCA;
+}
+.contact form .field textarea {
+    width: 100%;
+    display: block;
+}
+footer{
+    background: #273b48;
+    padding:30px;
+    text-align: center;
+    color: #ebebeb;
+}
+.custom-shape-divider-top-1638201117 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1638201117 svg {
+    position: relative;
+    display: block;
+    width: calc(165% + 1.3px);
+    height: 85px;
+}
+
+.custom-shape-divider-top-1638201117 .shape-fill {
+    fill: #FFFFFF;
+}

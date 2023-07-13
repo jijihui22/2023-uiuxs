@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>BASE - multiple slide loop</title>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" href="./style.css">
+	<script>
+		$(document).ready(function(){
+			$('.slide_wrapper').slick();
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="slide_wrapper">
+			<ul class="slides">
+				<li>slide 01</li>
+				<li>slide 02</li>
+				<li>slide 03</li>
+				<li>slide 04</li>
+				<li>slide 05</li> 
+			</ul>
+			<p class="controls">
+				<span class="prev">prev</span>
+				<span class="next">next</span>
+			</p>
+		</div>	
+		<div class="slide_wrapper">
+			<ul class="slides">
+				<li>slide 01</li>
+				<li>slide 02</li>
+				<li>slide 03</li>
+				<li>slide 04</li>
+				<li>slide 05</li> 
+			</ul>
+			<p class="controls">
+				<span class="prev">prev</span>
+				<span class="next">next</span>
+			</p>
+		</div>	
+	</div>
+	<!-- partial -->
+	<script src="./slide.js"></script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>

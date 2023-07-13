@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>Viewport</title>
+
+<meta name="viewport" content="initial-scale=1.0"> <!-- ('user-scalable' 설정이 없음 > 자동으로 'yes'값이 적용됨)-->
+<!-- <meta name="viewport" content="initial-scale=1.0", user-scalable=no"> <!-- ('no'값을 적용하고자 'user-scalable 설정을 추가한 경우) -->
+
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+#wrap{
+	width: 980px;
+	background-color: lime;
+}
+.bg{
+	height: 100px;
+	background: url(img/treethum.png);
+	font: 20px verdana;
+	text-shadow: 1px 1px 0px white;
+}
+</style>
+</head>
+<body>
+
+<div id="wrap">
+
+	<h1>Viewport example</h1>
+	<p class="bg">#wrap의 width: 980px</p>
+	<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+</div>
+<form action="go.php" method="post" novalidate>
+	<fieldset>
+		<legend>필수입력항목</legend>
+		<p>
+			<label for="email">이메일 : </label>
+			<input type="email" id="email" name="email" value="">
+		</p>
+	</fieldset>
+	<input type="submit" value="send">
+</form>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+p{
+	background: beige;
+	color: gray;
+}
+p span{
+	font-weight: bold;
+	color: blue;
+}

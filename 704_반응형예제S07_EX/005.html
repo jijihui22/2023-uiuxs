@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>media</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+
+/* 총 4가지 미디어쿼리 설정, 생략된 '980~1199px' 영역은 기본값(데스크탑)에 해당하므로 '미디어쿼리' 설정이 없는 스타일들이 적용됨 */
+
+@media screen and (min-width: 1200px) {
+	/* large display, 1200 픽셀부터 그 이상 */
+	body{
+		background: silver;
+	}	
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	/* tablet(portrait), 768 픽셀부터 979 픽셀까지 */		
+	body{
+		background: green;
+	}	
+}
+
+@media screen and (max-width: 767px) {
+	/* phone ~ tablet, 767 픽셀까지 */	
+	body{
+		background: yellow;
+	}	
+}
+
+@media screen and (max-width: 480px) {
+	/* phone, 480 픽셀까지 */		
+	body{
+		background: black;
+	}	
+}
+
+
+/* 위 4가지 미디어쿼리 설정을 보다 짧게 표현한 방법 */
+/* 방법이 다를 뿐 내용이 중복되므로 전체 주석 처리함 */
+
+/*
+@media screen and (min-width: 480px) and (max-width: 767px) {
+	/* tablet(portrait), 480 픽셀부터 767 픽셀까지 */
+
+
+@media screen and (max-width: 479px) {
+	/* phone, 479 픽셀까지 */
+}
+*/
+
+
+/* 화면이 회전했을 경우에 다른 스타일을 적용하는 방법 */
+
+@media screen and (orientation: portrait) {
+	/* 화면이 '세로보기' 모드일 경우 적용할 스타일시트 작성 */
+}
+
+@media screen and (orientation: landscape) {
+	/* 화면이 '가로보기' 모드일 경우 적용할 스타일시트 작성 */
+}
+
+</style>
+
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+
+
+

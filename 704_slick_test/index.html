@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>BASE - multiple slide loop</title>
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<link rel="stylesheet" href="./style.css">
+	<script>
+		$(document).ready(function(){
+
+			$('.slides').slick();
+
+			$('.multiple').slick({
+					infinite: true,
+					slidesToShow: 3,
+					slidesToScroll: 3
+				});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="slide_wrapper">
+			<ul class="slides">
+				<li>slide 01</li>
+				<li>slide 02</li>
+				<li>slide 03</li>
+				<li>slide 04</li>
+				<li>slide 05</li> 
+			</ul>			
+		</div>	
+		<div class="slide_wrapper">
+			<ul class="multiple">
+				<li>slide 01</li>
+				<li>slide 02</li>
+				<li>slide 03</li>
+				<li>slide 04</li>
+				<li>slide 05</li> 
+			</ul>		
+		</div>	
+	</div>
+	<!-- partial -->
+	<!-- <script src="./slide.js"></script>
+	<script src="./script.js"></script> -->
+
+</body>
+
+</html>

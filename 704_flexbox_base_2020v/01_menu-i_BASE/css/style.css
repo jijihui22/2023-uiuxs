@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+body { font-family: Arial; }
+
+.main-nav .menu {
+  background-color: #eee;
+  list-style: none;
+  padding-left: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-nav .menu li {
+  padding: 4px;
+  padding-top: 14px;
+
+}
+
+.main-nav .fa {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.main-nav .menu-text {
+  display: inline-block;
+}
+
+.main-nav h4, .main-nav p {
+  margin: 0;
+}
+
+.main-nav p {
+  font-size: 12px;
+}

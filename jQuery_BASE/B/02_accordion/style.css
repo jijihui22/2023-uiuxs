@@ -1,0 +1,23 @@
+*{margin:0; padding:0;}
+.answer {
+	display:none;
+}
+.question{
+	border-bottom:2px solid #ccc;
+	transition:0.35s;
+}
+.question.ui-state-active{
+	border-bottom:2px solid #3498db;
+}
+.question .fa{
+	transform:rotate(0deg);
+	transition:0.35s;
+}
+.question.ui-state-active .fa{
+	transform:rotate(90deg);
+}
+
+.qna_list{
+	width:80%;
+	margin:0 auto;
+}

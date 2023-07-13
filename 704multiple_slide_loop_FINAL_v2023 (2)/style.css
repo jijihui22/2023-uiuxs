@@ -1,0 +1,12 @@
+*{margin:0; padding:0;}
+li{list-style:none;}
+
+.container{
+	width: 700px;
+	margin:0 auto;
+}
+
+.slides li{
+	height: 400px;
+	background: silver;
+}

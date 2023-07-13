@@ -1,0 +1,3 @@
+A Pen created at CodePen.io. You can find this one at http://codepen.io/alikerock/pen/WGmZNg.
+
+ You may have heard that flexbox allows you to easily change the order of your HTML elements, but why would you want to do that? If you want your content to display in a different order, why not just change the order of your HTML elements? In this project, I will show you a practical example of when you would use flexbox to change the order of your content.

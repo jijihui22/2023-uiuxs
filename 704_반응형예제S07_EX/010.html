@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"> 
+<title>Responsible Layout example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{margin: 0; padding: 0;}
+	body,h1,h2,h3,h4{font-family: verdana,sans-serif; font-size: 12px;}
+	#header{background-color: red; line-height: 40px;}
+	#wrap{width: 960px; margin: 0 auto;}
+	#content{background-color: lime;}
+	#footer{margin-top: 30px; background-color: silver; line-height: 30px;}
+
+	@media screen and (max-width: 960px) {
+		#wrap{
+			width: 100%;
+		}
+	}	
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header id="header">
+		<h1>Layout example</h1>
+	</header>
+
+	<div id="container">
+		<section id="content">
+			<h1>Content area</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, dolores, iste, expedita necessitatibus dolor quos facere beatae voluptas deserunt eum commodi quisquam aperiam itaque quae labore error suscipit consequuntur magni incidunt accusantium rerum nisi explicabo illum! Eveniet, dignissimos, atque, vel voluptas voluptatem minima ipsum tenetur laboriosam quas recusandae animi illum iure cumque deleniti optio quod veniam excepturi architecto doloremque dolorum pariatur aspernatur rerum quia? Delectus, nesciunt quis vero ab modi necessitatibus atque sint nobis! Neque, temporibus, quibusdam maxime consequuntur animi alias rerum doloremque porro id provident itaque eius vel fuga repellendus odit sit veniam atque vero inventore ex? Est, quis.</p>
+		</section>	
+	</div><!-- //container -->
+
+	<footer id="footer">
+		<p>Copyright &copy; 2014</p>
+	</footer>	
+</div><!-- //wrap -->
+
+</body>
+</html>

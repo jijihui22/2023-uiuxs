@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Basic</title>
+    <style>
+        body{
+            background: #fff;
+        }
+        /*
+            브라우저 너비 960이하의 스타일 body 배경색 실버
+            760 blue
+            500 #333
+        */
+        @media screen and (max-width:960px){
+            body{
+                background: silver;
+            }
+        }
+        @media screen and (max-width:760px){
+            body{
+                background: blue;
+            }
+        }
+        @media screen and (max-width:500px){
+            body{
+                background: #333;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>header</h1>
+        </header>
+        <section>
+            <h1>section</h1>
+        </section>
+        <footer>
+            <h1>footer</h1>
+        </footer>
+    </div>
+</body>
+
+</html>
