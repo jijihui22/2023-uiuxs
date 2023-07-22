@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sticky element</title>
+  
+  <style>
+    section{
+      height: 500px;
+    }
+    section:nth-child(odd){
+      background: #ebebeb;
+    }
+    .target{
+      width: 500px;
+      height: 100px;
+      margin: 0 auto;
+      padding-bottom: 300px;
+    }
+    .content{
+      background: #3498db;
+      width: 100%;
+      height: 100px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>sticky element</h1>
+  <section>
+    <h2>section 1</h2>
+  </section>
+  <section>
+    <h2>section 2</h2>
+  </section>
+  <section>
+    <h2>section 3</h2>
+    <div class="target">
+      <div class="content">
+        <h3>sticky element</h3>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>section 4</h2>
+  </section>
+  <section>
+    <h2>section 5</h2>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>
+    let target = $('.target'),
+        targetcontentHeight = target.height(),//Height() content까지 크기 
+        targetHeight = target.innerHeight(),//innerHeight() padding까지 크기 
+        targetOst = target.offset().top,
+        stickyElement = target.find('.content')
+
+        console.log(targetHeight)
+        /*
+          윈도우의 스크롤이 생기면 할일
+            스크롤 양 변수 sct할당
+            targetOst(1177px) - 500 보다 스크롤양이 많으면
+            stickyElement를 고정 position fixed
+            targetOst(1177px) - 500 보다 스크롤양이 적으면
+            stickyElement를 고정풀기 position relative
+        */
+        $(window).scroll(function(){
+          let sct = $(this).scrollTop()
+          console.log(sct,targetOst - 500)
+          if(targetOst - 500 < sct){
+            stickyElement.css({
+              position:'fixed',
+              width:'500px', 
+              top: '500px'});
+              if(targetOst - 500 + (targetHeight-targetcontentHeight)< sct){
+                stickyElement.css({
+              position:'relative', 
+              top: 0});
+              }
+              target.css({
+                []
+              })
+          } else {
+            stickyElement.css({
+              position:'relative', 
+              top: 0});
+          }
+        })
+  </script>
+</body>
+</html>

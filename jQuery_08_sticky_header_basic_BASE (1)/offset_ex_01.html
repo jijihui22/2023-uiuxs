@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+p { margin-left:10px; }
+*{
+  margin: 0;
+  padding: 0;
+}
+  </style>
+  <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+
+  <p>Hello</p><p>2nd Paragraph</p>
+  
+<script>
+var p = $('p:last');
+var offset = p.offset().top;
+// p.html( 'left: ' + offset.left + ', top: ' + offset.top );
+p.html( 'top: ' + offset );
+</script>
+
+</body>
+</html>
+

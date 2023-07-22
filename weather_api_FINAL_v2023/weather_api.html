@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Weather</title>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+    <script>
+        // $.getJSON('경로', 할일);
+        $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=d5948ec3ace590812f0049bbdb822c43&units=metric', function(data){
+            console.log(data);
+
+            let utime = data.dt;
+            let ctime = new Date(utime*1000);
+            console.log(ctime);
+            console.log(ctime.getSeconds());
+            //년도   getFullYear() getMonth() 0~ getDate() getHours getMinutes() getSeconds
+
+            //2023년 7월 20일 14시 34분
+            
+            $('h2').append(`${ctime.getFullYear()}년 ${ctime.getMonth()+1}월 ${ctime.getDate()}일 ${ctime.getHours()}시 ${ctime.getMinutes()}분`);
+            
+            //현재 온도 출력
+            $('.ctemp').append(data.main.temp);
+            //최저 온도 출력
+            $('.clowtemp').append(data.main.temp_min);
+            //최고 온도 출력
+            $('.chightemp').append(data.main.temp_max);
+
+            //<img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+            let icon = data.weather[0].icon;
+            let alt = data.weather[0].main;
+            $('.cicon').append(`<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${alt}">`);
+        });
+
+    </script>
+</head>
+<body>
+<h1>weather api</h1>
+<h2>현재 시간: </h2>
+<div class="ctemp">현재 온도: </div>
+<div class="clowtemp">최저 온도: </div>
+<div class="chightemp">최고 온도: </div>
+<div class="cicon">아이콘 : </div>
+<!-- HTML -->
+</body>
+</html>

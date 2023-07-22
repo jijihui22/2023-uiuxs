@@ -1,0 +1,138 @@
+@import url(reset.css);
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+  line-height: 1.5;
+}
+h1{
+  font-size: 2em;
+}
+h2{
+  font-size: 1.5em;
+}
+h3{
+  font-size: 1.2em;
+}
+.container{
+  width: 80%;
+  margin:0 auto;
+}
+table{
+  width: 100%;
+}
+table th, table td{
+  border:1px solid #ebebeb;
+  text-align: center;
+  padding: 10px 5px;
+}
+.col1{
+  width: 10%;
+}
+.col2{
+  width: 40%;
+}
+.col3{
+  width: 15%;
+}
+.col4{
+  width: 10%;
+}
+.footer {
+  background: #ebebeb;
+  margin-top: 20px;
+  padding: 20px;
+}
+.footer:after{
+  content:'';
+  display: block;
+  clear:both;
+}
+.footer .list{
+  float: left;
+}
+.footer .btns{
+  float: right;
+}
+
+.label{
+  width: 20%;
+}
+.content{
+  width: 80%;
+}
+.write_form table td:last-child{
+  text-align: left;
+}
+.write_form table td:last-child input,
+.write_form table td:last-child textarea{
+  width: 100%;
+  box-sizing:border-box;
+  border:none;  
+  border:1px solid #ccc;
+}
+#lockpost {
+  display: inline-block !important;
+  width:auto;
+}
+#passform{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.8);
+}
+#passform form{
+  padding: 20px;
+  border-radius:15px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%, -50%);
+}
+.reply_list dialog{
+  position: fixed;
+  left: 0;right: 0;top: 0;bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+  visibility: hidden;
+}
+.reply_list dialog[open]{
+  opacity:1;
+  visibility: visible; 
+}
+.reply_list dialog form,
+.reply_form form{
+  width: 60%;
+  background: #fff;
+  padding:20px; 
+  display: flex;
+  flex-direction: column;
+  border-radius:5px;
+  gap:10px;
+}
+.pagenation {
+  display: flex;
+  gap:10px;
+  margin: 20px 0;
+}
+.pagenation a{
+  padding: 5px 10px;
+  background: #eee;
+  border-radius:5px;
+  text-decoration: none;
+  color: #000;
+}
+.pagenation a.active{
+  background: #3498db;
+  color: #fff;
+}
+.write_form img{
+  width: 100%;
+}

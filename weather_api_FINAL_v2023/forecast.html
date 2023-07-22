@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Weather</title>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+    <script>
+    // $.getJSON('경로', 할일);
+    $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=d5948ec3ace590812f0049bbdb822c43&units=metric', function(data){
+        console.log(data.list);
+
+        $.each(data.list, function(i, item){
+            let ftime = convertTime(item.dt);
+            console.log(ftime);
+
+            //tr코드생성 tbody 내용의 뒤에 추가
+            $('tbody').append(
+                `<tr>
+                    <td>${i+1}</td>
+                    <td>${ftime}</td>
+                    <td>${item.main.temp}</td>
+                    <td>${item.weather[0].main}</td>
+                </tr>`
+            )
+        });
+
+                 /*
+            rowsPerPage 7
+            rows
+            rowsCount
+            pageCount
+            pagenation
+         */
+        //페이지네이션 생성
+        let rowsPerPage = 7,
+            rows = $('tbody tr'),
+            rowsCount = rows.length,
+            pageCount = Math.ceil(rowsCount/rowsPerPage),
+            pagenation = $('.pagenation')
+
+            for(let i=1;i<rowsCount;i++){
+                
+            }
+        //페이지네이션 함수
+
+        //페이지네이션 클릭시 할일
+    });
+
+    function convertTime(t){
+        let dt = new Date(t*1000);
+        let timetable = `${dt.getFullYear()}/${dt.getMonth()}/${dt.getDate()} ${dt.getHours()}시`;
+        return timetable;
+    }
+    </script>
+</head>
+<body>
+<h1>weather forecase</h1>
+<table>
+    <thead>
+        <tr>
+            <td>no.</td>
+            <td>날짜</td>
+            <td>온도</td>
+            <td>날씨</td>
+        </tr>
+    </thead>
+    <tbody>
+        <!--
+        <tr>
+            <td>1</td>
+            <td>2023.7.21.00</td>
+            <td>25</td>
+            <td>Clouds</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2023.7.21.03</td>
+            <td>27</td>
+            <td>Clouds</td>
+        </tr>
+        -->
+    </tbody>
+</table>
+
+</body>
+</html>

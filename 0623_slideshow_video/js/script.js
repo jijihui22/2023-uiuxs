@@ -14,14 +14,14 @@ let slideWrapper = document.querySelector('.slide-wrapper'),  //ul의 부모
 if(slideCount > 1){
   slides.forEach((item, idx)=>{
     item.style.left = `${idx*100}%`;
-    //pager a 태그 생성
+    //pager html을 직접 넣기(페이지 수 만큼 생성하기 위해서)  a 태그 생성
     pagerHTML += `<a href="">${idx}</a>`;    
   });
 }
 pager.innerHTML = pagerHTML;
 let pagerBtn = pager.querySelectorAll('a');
 
-function moveSlide(num){
+function moveSlide(num){//현재 페이지에 아래 슬라이트 버튼을 액서스
   slideContainer.style.left = `${-num*100}%`;
   currentSlideIdx = num;
   console.log(currentSlideIdx);

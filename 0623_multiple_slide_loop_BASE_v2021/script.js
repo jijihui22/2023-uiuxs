@@ -28,6 +28,7 @@ function moveSlide(num){
 */
 nextBtn.addEventListener('click', ()=>{
   if(currentIdx < slideCounter - slidesPerview){
+    0 < 0 - 
     moveSlide(currentIdx + 1);
   } 
 });
