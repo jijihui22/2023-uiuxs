@@ -5,17 +5,26 @@
     <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
     <script>
         // $.getJSON('경로', 할일);
-        $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=d5948ec3ace590812f0049bbdb822c43&units=metric', function(data){
-            console.log(data);
+        $.getJSON('https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=61GuhvGDfg1f4EXXGd%2B3KWk%2BROmaqQniP2sqYMHgjV9ORizZOIP5aprBW3v3pt3QGTZ12zcQoBsh7R8q3nXuyA%3D%3D&pageNo=1&numOfRows=1000&dataType=json&base_date=20230724&base_time=0500&nx=55&ny=127', function(data){
+            console.log(data.response.body.items.item);
+            
+            let allDate = data.response.body.items.item
 
-            let utime = data.dt;
-            let ctime = new Date(utime*1000);
-            console.log(ctime);
-            console.log(ctime.getSeconds());
+            //document.getElementById("demo").innerHTML = ages.filter(age=> age >= 18)
+
+            let filteredDate = allDate.filter(data=> data.category === 'TMP')
+
+            console.log(filteredDate)
+
+            // let utime = data.dt;
+            // let ctime = new Date(utime*1000);
+            // console.log(ctime);
+            // console.log(ctime.getSeconds());
             //년도   getFullYear() getMonth() 0~ getDate() getHours getMinutes() getSeconds
 
             //2023년 7월 20일 14시 34분
             
+            /*
             $('h2').append(`${ctime.getFullYear()}년 ${ctime.getMonth()+1}월 ${ctime.getDate()}일 ${ctime.getHours()}시 ${ctime.getMinutes()}분`);
             
             //현재 온도 출력
@@ -29,8 +38,11 @@
             let icon = data.weather[0].icon;
             let alt = data.weather[0].main;
             $('.cicon').append(`<img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${alt}">`);
-        });
+            */
+            
 
+            
+    });
     </script>
 </head>
 <body>

@@ -24,3 +24,14 @@ body{
   font-family: var(--font);
   color: var(--text-color, #2C2C2C);
 }
+
+header{
+  padding:  var(--base-unit) 0;
+}
+header h1 a{
+  background: url(../images/logo@2x.png);
+  display: block;
+  width: 161px;
+  height: 54px;
+  text-indent: -9999em;
+}
