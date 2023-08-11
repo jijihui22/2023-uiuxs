@@ -1,0 +1,15 @@
+@charset "utf-8";
+header{  
+  height: calc(var(--base-unit) * 2);
+  padding: var(--base-unit) 0;
+}
+header div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul{
+  display: flex;
+  gap:10px;
+  align-items: center;
+}

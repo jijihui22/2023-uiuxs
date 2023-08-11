@@ -1,0 +1,9 @@
+{
+  "name": "lesson",
+  "version": "1.0.0",
+  "dependencies": {
+    "bxslider": "^4.2.14",
+    "fontawesome": "^5.6.3",
+    "jquery": "^3.7.0"
+  }
+}

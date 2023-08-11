@@ -1,0 +1,327 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap');
+
+/* font-family: 'Fira Sans', sans-serif; */
+
+/* ----------- Layout ---------- */
+.container{
+    width: 900px;
+    margin:0 auto;
+}
+.inner-pd{
+    padding: 30px 0;
+}
+/* ----------- typography ---------- */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 21.5px;
+    font-size: 18px;
+    color: #777;
+}
+h1, h2{
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1;
+}
+.main-tt{
+    font-size: 42px;    
+}
+h3{
+    font-size: 24px;
+}
+section h2{
+    color: #e46965;
+    margin-bottom: 16px;
+}
+
+/* ----------- header ---------- */
+nav{
+    background: #dadada;
+    height: 40px;
+    padding: 6px 0;
+    box-sizing:border-box;
+}
+nav .main-menu{
+    float:left;
+}
+nav .social-menu{
+    float:right;
+}
+nav ul li{
+    float:left;
+}
+nav ul:after{
+    content:'';
+    clear:both;
+    display: block;
+}
+nav .main-menu li{
+    margin-right: 37px;    
+}
+nav .social-menu li{
+    margin-left: 25px;
+}
+nav .main-menu li a{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight:bold;
+    line-height:28px;
+}
+header {
+    text-align:center;
+    padding:23px 0 42px;
+}
+header h1 {
+    color: #777777;
+    margin-bottom: 8px;
+}
+header h2{
+    color: #e46965;
+    font-size: 20px;
+    text-transform:uppercase;
+}
+.menu-icon{
+    display: none;
+}
+/* ----------- feature ---------- */
+.feature {
+    background: #363636;
+}
+.feature li{
+    width: 33.333333%;
+    height:300px;
+    float:left;
+    border-right:1px solid #fff;
+    box-sizing:border-box;
+    text-align:center;
+    padding-top:98px;
+}
+.feature li:first-child{
+    border-left:1px solid #fff;
+}
+.feature li h3{
+    font-family: 'Fira Sans', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 24px;
+}
+.feature ul{
+    background:url(../images/feature-bg.jpg) no-repeat center top;
+}
+/* ----------- main content ---------- */
+
+/* ----------- portfolio ---------- */
+.portfolio {
+    background: #dadada;
+}
+.porfolio-list li{
+    width: 210px;
+    height: 210px;
+    /* margin-right: 20px;
+    float:left; */
+    background-repeat:no-repeat;
+    background-position:center;
+    position: relative;
+}
+/* .porfolio-list li:last-child{
+    margin-right: 0;
+} */
+.porfolio-list li .caption{
+    position: absolute;
+    left: 0;right: 0;bottom: 0;
+    background:rgba(0,0,0,.5);
+    padding: 9px;
+}
+.porfolio-list li .caption:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+.porfolio-list li .caption h3{
+    float:left;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+    color: #ffffff;
+    width: 90px;
+}
+.porfolio-list li .caption img{
+    float:right;
+}
+/* ----------- footer ---------- */
+footer {
+    background-color: #252525;
+}
+.footer-contents {
+    display: table;
+}
+.footer-contents .item{
+    width: 33.333%;
+    display:table-cell;
+}
+.footer-contents .item h3{
+    margin-bottom: 18px;
+    color: #e35765;
+}
+.footer-contents dl{
+    color: #9d9d9d;
+    line-height: 1;    
+}
+.footer-contents dt{
+    font-size: 14px;    
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+.footer-contents dd{
+    font-size: 12px;
+    font-style:italic;
+    margin-bottom: 30px;
+}
+address p {
+    font-size: 14px;
+    line-height: 17px;
+    color: #9d9d9d;
+    margin-bottom: 17px;
+}
+address p a{
+    font-style:italic;
+    color: #9d9d9d;
+}
+.footer-contents form input{
+    width: 100%;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: #363636;
+    border:1px solid #6d6d6d;
+    padding:0 13px;
+    color:#fff;
+    margin-bottom:21px;
+    box-sizing:border-box;
+    font-size: 18px;
+}
+.footer-contents form input::placeholder{
+    color:#6d6d6d;
+}
+.footer-contents form button{
+    border:none;
+    background:#e46965;
+    text-align: center;
+    line-height: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'Fira Sans', sans-serif;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+.copyright {
+    background: #1d1d1d;
+    text-align: center;    
+    line-height: 40px;
+    color: #686868;
+    font-size: 12px;
+}
+
+/* 태블릿 구간 반응형 */
+@media screen and (max-width:900px){
+    .container{
+        width:100%;
+        padding:0 15px;
+        box-sizing:border-box;
+    }
+    /* .porfolio-list li{
+        width: 25%;
+        margin-right: 0;
+    } */
+    .inner-pd{
+        padding: 30px 15px;
+    }
+    .inner-pd .container{
+        padding: 0;
+    }
+}
+/* 모바일 구간 반응형 */
+@media screen and (max-width:500px){
+    /* .porfolio-list li{
+        width: 100%;
+        margin-bottom:20px;
+        float:none;
+    } */
+    .footer-contents{
+        display: block;
+    }
+    .footer-contents .item{
+        width: 100%;
+        display: block;
+    }
+    .feature .container{
+        padding: 0;
+    }
+    .feature ul{
+        background:none;
+    }
+    .feature li {
+        background:url(../images/feature-bg.jpg) no-repeat;
+        width: 100%;
+        float:none;
+        height: 120px;       
+        border-right:none;
+        border-bottom: 1px solid #fff;
+        padding:0 15px;
+        padding-top: 28px;
+        box-sizing:border-box;
+    }
+    .feature li:first-child {
+        border-left: none;        
+    }
+    .feature li:nth-child(2){
+        background-position: center;
+    }
+    .feature li:nth-child(3){
+        background-position: right bottom;
+    }
+    .feature li img{
+        float:left;
+    }
+    .feature li h3 {
+        float:left;
+        margin-left:20px;
+    }
+    .menu-icon{
+        display: block;
+        margin-left:15px;
+        padding-bottom:6px;
+    }
+    nav{
+        position: relative;
+    }
+    .social-menu{
+        position: absolute;
+        right: 15px;
+        top:6px;
+    }
+    nav{
+        height:auto;
+        padding:6px 0 0;
+    }
+    nav .main-menu{
+        background: #333333;
+        width: 100%;
+        float:none;
+        display:none;
+    }
+    nav .main-menu li{
+        float:none;
+        padding:0 15px;
+        line-height: 40px;
+        margin-right:0;
+    }
+    nav .container{
+        padding: 0;
+    }
+    
+}

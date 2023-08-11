@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>circle animation</title>
+  <style>
+    svg{
+      width: 220px;
+      height: 220px;
+      transform: rotate(-90deg);
+    }
+    svg circle{
+      fill: #ebebeb;
+      stroke-width: 20;
+      stroke: #ffc114;
+      stroke-dasharray: 628px;
+      stroke-dashoffset: 682px;
+      stroke-linecap: round;
+      transition: 0.1s;
+    }
+    .chart:nth-child(2) circle{
+      stroke: #ff5248;
+      stroke-dashoffset: 314px;
+    }
+    .chart:nth-child(3) circle{
+      stroke: #19cdca;
+    }
+    .chart:nth-child(4) circle{
+      stroke: #4e80e1;
+    }
+    .charts{
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+    .chart{
+      position: relative;
+    }
+    .chart h2{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <h1>Circle animation</h1>
+  <div class="charts">
+    <div class="chart">
+      <h2 data-num="20">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100" ></circle>
+      </svg>
+    </div>
+    <div class="chart">
+      <h2 data-num="50">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100" ></circle>
+      </svg>
+    </div>
+    <div class="chart">
+      <h2 data-num="60">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100" ></circle>
+      </svg>
+    </div>
+    <div class="chart">
+      <h2 data-num="100">0</h2>
+      <svg>
+        <circle cx="110" cy="110" r="100" ></circle>
+      </svg>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    let chart = $('.chart')
+    chart.each(function(){
+      let $this = $(this)
+      let title = $(this).find('h2')
+      let targetNum = title.attr('data-num')
+      let targetSVG = $(this).find('circle')
+
+      $({num:0}).animate({num:targetNum}, {
+        duration:1500,
+         progress:function(){
+        let now = Math.ceil(this.num)
+        console.log(now)
+        title.text(now)
+        let value = 628 - (628 *now/100) 
+        targetSVG.css({strokeDashoffset:value})
+      }})
+    })
+  </script>
+</body>
+</html>

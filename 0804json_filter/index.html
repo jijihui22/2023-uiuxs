@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>json - filter</title>
+  <style>
+    .product_list {
+      display: flex; flex-wrap:wrap;
+      gap:20px;
+      list-style: none;
+    }
+    .product_list li{
+      width: 20%;
+      visibility:hidden;
+    }
+    .product_list li h2{
+      font-size: 0.8em;
+    }
+    .product_list li img{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Products</h1>
+  <label for="category">품목</label>
+  <select name="" id="category">
+    <option value="all">all</option>
+    <option value="smartphones">smartphones</option>
+    <option value="laptops">laptops</option>
+    <option value="fragrances">fragrances</option>
+    <option value="skincare">skincare</option>
+  </select>
+  <hr>
+  <ul class="product_list">
+    <!-- 
+    <li>
+      <h2>- Daal Masoor 500 grams</h2>
+      <img src="https://i.dummyjson.com/data/products/20/thumbnail.jpg" alt="">
+    </li> 
+    -->
+  </ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+  <script src="filter.js"></script>
+
+</body>
+</html>

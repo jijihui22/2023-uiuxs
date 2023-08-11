@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson 4 - jQuery Validation</title>
+	<style>
+		span.invalid{
+			background: navy;
+			color: #fff;
+			padding: 5px 10px;
+			border-radius:10px;
+			position: relative;
+			left:40px;
+			animation:fadeIn 0.5s forwards;
+			opacity: 0;
+		}
+		@keyframes fadeIn {
+			0%{	left:40px; opacity: 0;}
+			100%{left:20px; opacity: 1;}
+		}
+		span.invalid:after{
+			content:'';
+			position:absolute;
+			right:100%;
+			top:50%;
+			transform:translateY(-50%);
+			border-style:solid;
+			border-width:6px;
+			border-color:transparent navy transparent transparent;
+		}
+	</style>
+</head>
+
+<body>
+
+	<form action="" novalidate>
+		<div class="field">
+			<label for="username">User Name: </label>
+			<input type="text" name="username" id="username" minlength="2" required>
+		</div>
+		<div class="field">
+			<label for="useremail">User Email: </label>
+			<input type="email" name="useremail" id="useremail" required>
+		</div>
+		<div class="field">
+			<label for="msg">Message: </label>
+			<textarea name="" name="msg" id="msg" cols="30" rows="10" required></textarea>
+		</div>
+		<button>전송</button>
+	</form>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+		integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+	<script src="jquery.validate.min.js"></script>
+	<script>
+		$("form").validate({
+			errorClass: "invalid",
+			errorElement: "span",
+			rules: {
+				// simple rule, converted to {required:true}
+				username: {
+					required: true,
+					minlength:2
+				},
+				// compound rule
+				useremail: {
+					required: true,
+					email: true
+				}
+			},
+				messages: {
+					username: {
+						required: "이름 필수!",
+						minlength: "최소 2글자 이상 입력하세요"
+					},
+					useremail: {
+						required: "이메일 필수!",
+						email: "이메일 형식을 지켜주세요."
+					}
+				}
+		});
+	</script>
+</body>
+
+</html>

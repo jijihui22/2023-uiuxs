@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Swiper slider</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+	<h1>Swiper</h1>
+
+	<h2>기본 슬라이드</h2>
+	<div class="swiper basic-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+
+	<hr />
+
+	<h2>좌우 컨트롤 슬라이드1</h2>
+	<div class="swiper control-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<!-- 기존말고 새로  아래 만든 것에 적용 
+				슬라이드 밖에 만들어야 함 클래스가 다르기 때문-->
+	<div class="control-prev"><img src="images/left.png" alt=""></div>
+	<div class="control-next"><img src="images/right.png" alt=""></div>
+
+	<h2>좌우 컨트롤 슬라이드2</h2>
+	<div class="swiper control-slide2">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<!-- 기존말고 새로  아래 만든 것에 적용 
+				슬라이드 밖에 만들어야 함 클래스가 다르기 때문-->
+	<div class="control-prev2"><img src="images/left.png" alt=""></div>
+	<div class="control-next2"><img src="images/right.png" alt=""></div>
+
+	<h2>페이저</h2>
+	<div class="swiper pager-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+			...
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+
+
+	<hr />
+
+	<h2>멀티플 슬라이드</h2>
+	<div class="swiper multiple-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<hr />
+
+	<h2>활성화 슬라이드</h2>
+	<div class="swiper active-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""><h2>slide title</h2></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""><h2>slide title</h2></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""><h2>slide title</h2></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""><h2>slide title</h2></div>
+			...
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<hr />
+
+	<h2>슬라이드 옵션 활용하기</h2>
+	<div class="swiper option-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""><h2>slide title</h2></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""><h2>slide title</h2></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""><h2>slide title</h2></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""><h2>slide title</h2></div>
+			...
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<hr />
+
+	<h2>자동 슬라이드 구현</h2>
+	<div class="swiper auto-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+			...
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<hr />
+
+	<h2>동영상 슬라이드 </h2>
+	<div class="swiper movie-slide">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide"><video src="video/vivaldi.mp4" muted loop></video></div>
+			<div class="swiper-slide"><video src="video/vivaldi.mp4" muted loop></video></div>
+			<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+			<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+			...
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+	
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	
+		<!-- If we need scrollbar -->
+		<div class="swiper-scrollbar"></div>
+	</div>
+	<hr />
+
+	<h2>탭 + 슬라이드 연동 </h2>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Nunc tincidunt</a></li>
+			<li><a href="#tabs-2">Proin dolor</a></li>
+			<li><a href="#tabs-3">Aenean lacinia</a></li>
+		</ul>
+		<div id="tabs-1">
+			<div class="swiper tab-slide">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+		<div id="tabs-2">
+			<div class="swiper tab-slide">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+		<div id="tabs-3">
+			<div class="swiper tab-slide">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="images/img-1.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-2.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-3.jpg" alt=""></div>
+					<div class="swiper-slide"><img src="images/img-4.jpg" alt=""></div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+	</div>
+	<hr />
+
+</body>
+
+</html>

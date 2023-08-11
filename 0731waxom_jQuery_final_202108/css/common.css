@@ -1,0 +1,94 @@
+@import url('normalize.css');
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@500;600;800&display=swap');
+
+/* ----------------- 레이아웃 ---------------- */
+.container{
+    width: 1110px;
+    margin:0 auto;
+}
+.hidden{
+    display: none;
+}
+section > p{
+    width: 852px;
+    margin:27px auto;
+}
+/* ----------------- 폰트 위계 ---------------- */
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+body{
+    font:16px/27px 'Montserrat', sans-serif;
+    color:#555;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Raleway', sans-serif;
+    line-height: 1;
+    letter-spacing:-0.01em ; /* 1000 = 1em, 100 = 0.1em, 10 = 0.01*/
+}
+.main_tt {
+    font-size: 52px;
+    font-weight: 800;    
+}
+.sub_tt{
+    font-size: 36px;
+    font-weight: 500;
+}
+.con_head_tt{
+    font-size: 30px;
+    font-weight: 600;
+}
+.con_sub_tt{
+    font-size: 22px;
+    font-weight: 600;
+}
+em{
+    color:#c7b299;
+}
+.link{
+    color:#c7b299;
+    text-decoration: underline;
+}
+
+/* ----------------- 링크 버튼 스타일 ---------------- */
+.btn {
+    border-radius:4px;
+    display: inline-block;
+    vertical-align: top;
+}
+.btn.primary{
+    line-height: 54px;
+    padding: 0 30px;
+    background: #998675;
+    color:#fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;;
+    text-transform: uppercase;
+    transition:box-shadow 0.3s;
+}
+.btn.secondary{
+    line-height: 30px;
+    padding: 0 28px;
+    background: #fff;
+    border:1px solid #ebebeb;
+    transition:0.3s;
+}
+.btn.primary:hover{
+    box-shadow:inset 0 -3px 0 rgba(0,0,0,.4);
+}
+.btn.secondary:hover, .btn.secondary.active{
+    background: #998675;
+    color:#fff;
+    border-color:transparent;
+}
+/* ----------------- 폼 ---------------- */
+
+/* ----------------- 배색 ---------------- */
+.content_bg {background: #fbfaf8;}
+.primary_color {color:#998675;}
+.primary_bg {background:#998675;}
+.sec_color {color:#c7b299;}
+.sec_bg {background:#c7b299;}

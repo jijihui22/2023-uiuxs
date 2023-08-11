@@ -26,9 +26,12 @@ for(let i = 0; i<slideCount;i++){
     slide.style.left = `${idx*(slideWidth+slideMargin)}px`;
   });
   
+  //슬라이드 배치  
+  slideContainer.style.width = (slideWidth*slideCount) + slideMargin*(slideCount-1) + 'px';
+
   function setSlide(){
     // ul {transform:translateX(-3000px)}
-    let ulMoveAmt = (slideWidth + slideMargin)*-slideCount+'px';
+    let ulMoveAmt = (300 + slideMargin)*-slideCount+'px';
     slideContainer.style.transform = `translateX(${ulMoveAmt})`;
     slideContainer.classList.add('animated');
   }

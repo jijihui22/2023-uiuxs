@@ -1,0 +1,254 @@
+@charset 'utf-8';
+
+body{
+  padding-top: 108px;
+  transition:0.3s;
+}
+body.sticky{
+  padding-top: 82px;
+}
+/* Header */
+header{
+  background-color:#fff;
+  box-shadow: 0 5px 3px rgba(0,0,0,.1);
+  transition:padding 0.3s;
+  position: fixed;
+  left: 0;right: 0;top: 0;
+  z-index:10;
+}
+.sticky header{
+  padding: 15px 0;
+}
+header h1 {
+  float: left;
+}
+header nav {
+  float: right;
+  padding: 7.5px 0;
+}
+header nav li {
+  float: left;
+  margin-left: 10px;
+}
+header nav li:first-child{
+  margin-right: 20px;
+  line-height: 39px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+header nav li:first-child span{
+  margin:0 10px;
+}
+header h1 a{
+  width: 161px;
+  height: 54px;
+  background: url(../images/logo.png) no-repeat;
+  display: block;
+  text-indent: -9999em;
+}
+header .btn i{
+  margin-right: 10px;
+}
+/* Main Page */
+.banner{
+  text-align: center;
+}
+.banner .main-tt{
+  margin-bottom: 27px;
+}
+.banner .content-tt{
+  margin-bottom: 54px;
+  color: #fff;
+}
+.banner img{
+  display: block;
+  width: 1076px;
+  margin:44px auto 0;
+}
+
+.feature_list li{
+  width: 408px;
+  float: left;
+  text-align: center;
+  margin-right: 24px;
+}
+.feature_list li:last-child {
+  margin-right: 0;
+}
+.feature_list li .circle{
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  border:1px solid #439ccf;
+  box-sizing: border-box;
+  margin:0 auto 27px;
+  line-height: 106px;
+  color: #439ccf;
+  font-size: 32px;
+}
+.feature_list li h3{
+  font-size: 24px;
+  margin-bottom: 27px;
+}
+.testimonial {
+  padding-top: 75px;
+}
+.slidewrapper {
+  position: relative;
+  overflow: hidden;
+}
+.slidewrapper ul{
+  width: 100%;
+  /* height: 114px;*/
+}
+.slidewrapper ul li{
+  /* width: 100%; */
+  /* height: 100%; */
+  /* top: 0; */
+  /* position: absolute; */
+  text-align: center;
+  color: #489dcd;
+}
+.testimonial ul li blockquote{
+  font-size: 24px;
+  line-height: 34px;
+  font-style: italic;
+  width: 65%;
+  margin:0 auto;
+}
+.slidewrapper > a{
+  position: absolute;
+  font-size: 45px;
+  color: #ebebeb;
+  top:50%;
+  transform:translateY(-50%);
+}
+.slidewrapper > .prev{
+  left: 0;
+}
+.slidewrapper > .next{
+  right: 0;
+}
+
+footer{
+  text-align: center;
+}
+footer .cta{
+  background: #292c2e;
+  color: #fff;
+}
+.cta .content-desc{
+  color: #a8a8a8;
+}
+.copyright p:first-child{
+  margin-bottom: 27px;
+}
+
+/* ABOUT */
+.qna_list{
+  width: 750px;
+  margin:auto;
+}
+.qna_list li + li{
+  margin-top: 1px;
+}
+.qna_list .question{
+  background: #ebebeb;
+  line-height: 54px;
+  padding:  0 20px;
+  position: relative;
+}
+.qna_list .question i{
+  position: absolute;
+  right: 20px;
+  top:50%;
+  transform:translateY(calc(-50% - 4px));
+  opacity: 0.4;
+}
+.qna_list .answer{
+  padding: 0;
+  height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition:height 0.3s;  
+}
+.qna_list .answer p{
+  display: none;
+}
+.qna_list li.active .question{
+  font-weight: bold;
+}
+.qna_list li.active .answer{
+  height: 100px;
+  padding: 20px 20px 37px;
+}
+.qna_list li.active .answer p{
+  display: block;
+}
+.qna_list li.active .question i{
+  transform:translateY(calc(-50% + 4px)) rotate(180deg);
+  opacity: 1;
+}
+
+.portfolio figcaption{
+  width: 659px;
+  margin: 27px auto 0;
+}
+.portfolio figcaption p{margin-bottom: 27px;}
+.sign .cta{
+  background: none;
+}
+.sign .cta .content-tt{
+  color: #2c2c2c;
+}
+form a{
+  margin-top: 81px;
+  display: block;
+}
+.banner form{
+  position: relative;
+}
+.banner .feedback{
+  position: absolute;
+  width: 262px;
+  padding: 16px 20px 25px;
+  background: #fff;
+  border-radius:3px;
+  left:calc(100% + 40px);
+  top: 0;
+  text-align:left;
+  color: #f30000;  
+  display: none;
+}
+.banner .feedback p+p{
+  margin-top: 27px;  
+}
+.banner .feedback:before{
+  content:'';
+  border-width:12px 13px;
+  border-style:solid;
+  border-color:transparent #fff transparent transparent;
+  position: absolute;
+  right:100%;
+  top: 30px;
+}
+.slidewrapper{
+  position: relative;
+}
+.bx-prev{
+  color: gray;
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bx-next{
+  color: gray;
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

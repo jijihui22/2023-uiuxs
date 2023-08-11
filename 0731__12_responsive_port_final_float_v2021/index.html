@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Design Portfolio</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  $(".menu-icon").click(function(){
+		$(".main-menu").slideToggle();
+	  });
+
+		let sliderwatter = $(".slider").bxSlider({//bx slide 만들고 변수에 넣음
+			minSlides: 2,
+			maxSlides: 4,
+			moveSlides: 1,
+			slideWidth: 210,
+			slideMargin: 20
+		});
+		// $(".slider .prev").click(function(){
+		// 	multifulslider.goToPrevSlide()
+		// })
+		// $(".slider .next").click(function(){
+		// 	multifulslider.goToNextSlide()
+		// })
+		$(".slider. prev").click(function(){
+			sliderwatter.goToPrevSlide();//bx슬라이드 함수 변수에 사용
+		})
+	});
+	
+	</script>	
+
+</head>
+<body>
+	<nav>
+		<div class="container clearfix">
+			<img src="images/menu-icon.png" alt="menu-icon" class="menu-icon">
+			<ul class="main-menu">
+				<li><a href="">home</a></li>
+				<li><a href="">work</a></li>
+				<li><a href="">about</a></li>
+				<li><a href="">contact</a></li>
+			</ul>
+			<ul class="social-menu">
+				<li><a href=""><img src="images/youtube.png" alt="youtube"></a></li>
+				<li><a href=""><img src="images/twitter.png" alt="twitter"></a></li>
+				<li><a href=""><img src="images/facebook.png" alt="facebook"></a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<header>
+		<h1 class="main-tt">My Design Portfolio</h1>
+		<h2>Design solutions for Your besiness</h2>
+	</header>
+
+	<section class="feature">
+		<h2 class="hidden">feature</h2>
+		<ul class="container clearfix">
+			<li>
+				<a href="">
+					<img src="images/web.png" alt="web">
+					<h3>Web design</h3>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/graphic.png" alt="graphic">
+					<h3>Graphic design</h3>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/video.png" alt="video">
+					<h3>Video design</h3>
+				</a>
+			</li>
+		</ul>
+	</section><!-- //feature -->
+
+	<section class="main-content inner-pd container">
+		<h2 class="main-tt">Design Services</h2>	
+		<p>
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat possimus itaque consequuntur eos sapiente corrupti culpa quae! Delectus vitae explicabo ut, quis dolore iste, dolor ab quo incidunt hic asperiores?
+		</p>
+	</section><!-- //main-content -->
+
+	<section class="portfolio inner-pd">
+		<div class="container">
+			<h2 class="main-tt">Portfolio</h2>
+			<ul class="porfolio-list clearfix slider">
+
+				<ul style="background-image:url(images/laptops.jpg);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/web-small.png" alt="web">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/acmelogo.gif);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/graphic-small.png" alt="graphic">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/tablet.jpg);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/video-small.png" alt="video">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/alogo.gif);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/graphic-small.png" alt="graphic">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/laptops.jpg);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/web-small.png" alt="web">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/acmelogo.gif);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/graphic-small.png" alt="graphic">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/tablet.jpg);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/video-small.png" alt="video">
+					</div>
+				</ul>
+				<ul style="background-image:url(images/alogo.gif);">
+					<div class="caption">
+						<h3>Lorem ipsum dolor sit</h3>
+						<img src="images/graphic-small.png" alt="graphic">
+					</div>
+				</ul>
+				
+			</ul>
+			<button class="prev">prev</button>
+			<button class="next">next</button>
+		</div>
+	</section><!-- //portfolio -->
+
+	<footer>
+		<div class="footer-contents inner-pd container">
+			<div class="item">
+				<h3>From the Blog</h3>
+				<dl class="blog-list">
+					<dt>Lorem ipsum dolor sit</dt>
+					<dd>on March 10, 2014</dd>
+					<dt>Lorem ipsum dolor sit</dt>
+					<dd>on March 10, 2014</dd>
+					<dt>Lorem ipsum dolor sit</dt>
+					<dd>on March 10, 2014</dd>
+				</dl>
+			</div>			
+			<div class="item">
+				<h3>Contact Us</h3>
+				<address>
+					<p>123 45th Street<br/>
+						Podunk, TX 77777</p>
+					<p>(555)555-5555</p>
+					<p><a href="mailto:info@email.com">info@email.com</a></p>
+				</address>
+			</div>			
+			<div class="item">
+				<h3>Register for Updates</h3>
+				<form action="">
+					<label for="username" class="hidden">username</label>
+					<input type="text" id="username" placeholder="Name">
+					<label for="useremail" class="hidden">username</label>
+					<input type="email" id="useremail" placeholder="email@address.com">
+					<!-- <input type="submit" value="subscribe"> -->
+					<button>subscribe</button>
+				</form>
+				
+			</div>			
+		</div>
+		<div class="copyright">
+			<p>&copy; copyright 2021, My Portfolio Designs</p>
+		</div>
+	</footer>
+</body>
+</html>

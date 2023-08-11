@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* Base */
+
+
+.scene { height : 250vh; position: relative; }/* 이걸 늘리면 지속시간이 길어짐 */
+
+section{
+    height: 80vh;
+}
+.image-sequence {    
+    width: 100%;
+    height : 100vh; 
+    position: sticky;
+    top:0;
+}
+.image-sequence img {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+.image-sequence img:first-child {
+    display: block;
+}
+

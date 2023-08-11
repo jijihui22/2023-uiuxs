@@ -1,0 +1,13 @@
+.demo-container{
+  width: 500px;
+  height: 333px;
+  background: url('../images/image.jpg') 0 0 / 500px 333px;
+}
+/*
+pixel ratio 2이상에서는 배경 image@2x.jpg
+*/
+@media (min-resolution:2dppx){
+  .demo-container{
+    background-image:url(../images/image@2x.jpg);
+  }
+}

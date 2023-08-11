@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lesson  - Modernizr</title>
+
+	<style>
+		img{
+			-webkit-box-reflect:below;
+			vertical-align: top;
+		}
+		.no-cssreflections .box { border-radius: 20px; }
+		.demo1{
+			display: none;
+		}
+		.no-cssreflections .demo1{
+			display: block;
+			transform: rotateX(-180deg);
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<!-- Demo content -->
+
+	<img src="images/demo-image.jpg" alt="" class="demo">
+	<img src="images/demo-image.jpg" alt="" class="demo1">
+	<script src="modernizr-custom.js"></script>
+	<script>
+		if(!Modernizr.cssreflections){
+			alert('해당 브라우저는 cssreflections  효과를 지원하지 않습니다')
+		}
+	</script>
+</body>
+</html>

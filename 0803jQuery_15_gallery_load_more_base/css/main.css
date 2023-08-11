@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Base */
+
+li{list-style:none;}
+
+/* Page main */
+.page-main { margin: auto; padding: 0 10px 100px; width: 960px;}
+
+/* Gallery  */
+.gallery { margin: 0; padding: 0;display: flex; gap:15px;flex-wrap: wrap;}
+.gallery:after{content:''; display:block; clear:both;}
+
+.gallery-item {  background:silver; padding:10px 20px; animation: fadeIn 1s;margin-bottom: 20px;}
+.gallery-item h2{ font-size: 0.8em;}
+
+
+
+@keyframes fadeIn{
+	0% {opacity:0; }
+	100% { opacity:1;}
+}
+
+
+/*  이미지를 로딩하는 동안 보이지 않게 함*/
+.gallery-item.is-loading { opacity: 0; }

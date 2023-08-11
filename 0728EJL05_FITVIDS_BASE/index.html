@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>FitVids.js</title>
+
+	<style>
+		.container, .container-2{
+			width: 80%;
+			margin: 2rem auto;
+		}
+		.container video{
+			width: 100%;
+		}
+		.container-2 iframe{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Demo content -->
+	<div class="container">
+		<video src="vivaldi_no_sound.mp4" controls></video>
+	</div>
+	<div class="container-2">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/kHwyryFq8nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+	<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/96234889?h=c51b8ec264&color=11e7f2" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/96234889">Viva IDs</a> from <a href="https://vimeo.com/rafaelmonguilhott">Rafael Monguilhott</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+	<!-- Add Bower components -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js" integrity="sha512-/2sZKAsHDmHNoevKR/xsUKe+Bpf692q4tHNQs9VWWz0ujJ9JBM67iFYbIEdfDV9I2BaodgT5MIg/FTUmUv3oyQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$('.container-2').fitvids()
+	</script>
+
+
+</body>
+</html>

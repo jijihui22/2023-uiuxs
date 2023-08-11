@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css" integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    nav{
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+    }
+    section img{
+      opacity: 0;
+      transform: translateX(200px);
+      transition: .3s .5s;
+    
+    }
+    section img.active{
+      opacity: 1;
+      transform:none
+    }
+    .slide{
+      background: silver;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <li><a href="#page1">section1</a></li>
+    <li><a href="#page2">section2</a>
+    <li><a href="#page3">section3</a></li>
+    <li><a href="#page4">section4</a></li>
+  </nav>
+  <div id="fullpage"><!-- //이이름은 바꿔도 되지만 아래 이름은 바꾸면 안됨 -->
+    <div class="section">
+      <!-- slide 모바일 끄거나 키거나 가능 -->
+      <div class="slide">slide1</div>
+      <div class="slide">slide2</div>
+      <div class="slide">slide3</div>
+      <div class="slide">slide4</div>
+    </div>
+    <div class="section">Some section2    <img src="http://placehold.co/600x300" alt=""></li>
+    </div>
+    <div class="section">Some section3</div>
+    <footer class="section fp-auto-height">
+      <p>
+        <!-- 자동으로 크기만큼 줄어들게 하자 -->
+
+      </p>Some section4</footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js" integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    new fullpage('#fullpage', {
+      //options here
+      anchors:['page1', 'page2', 'page3', 'page4'],//nav a값과 일치
+      autoScrolling:true,
+      scrollHorizontally: true,
+      navigation: true,
+      navigationPosition: 'right',
+      navigationTooltips: ['firstSlide', 'secondSlide','true', 'fil'],
+    });
+  </script>  
+</body>
+</html>

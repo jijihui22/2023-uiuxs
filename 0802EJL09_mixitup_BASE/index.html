@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title> MixItUp</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<style>	
+
+		* { box-sizing:border-box;}
+		.container, .mix-wrapper{
+			width: 75%;
+			margin:3em auto;
+		}
+		.mix-wrapper{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.mix {
+			width: 23%;
+			margin: 1em 1%;
+			text-align: center;
+			background: #ccc;
+			padding: 5px;		
+		}
+		.blue{background: blue; color:#fff;}
+		.orange{background: orange;}
+		.black{background: #000;color:#fff;}
+		.green{background: green;;}
+		
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<button type="button" data-filter="all">All</button>
+		<button type="button" data-filter=".blue">blue</button>
+		<button type="button" data-filter=".orange">orange</button>
+		<button type="button" data-filter=".black">black</button>
+		<button type="button" data-filter=".green">green</button>
+
+		<button type="button" data-sort="order:asc">Ascending</button>
+		<button type="button" data-sort="order:descending">Descending</button>
+		<button type="button" data-sort="random">Random</button>
+	</div>
+
+	<!-- Demo content -->
+	<div class="mix-wrapper">
+		<div class="mix blue" data-order="1">
+			<h5>BOX 1</h5>
+			<h6>blue</h6>
+		</div>
+		<div class="mix orange" data-order="2">
+			<h5>BOX 2</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix black" data-order="3">
+			<h5>BOX 3</h5>
+			<h6>black</h6>
+		</div>
+		<div class="mix orange" data-order="4">
+			<h5>BOX 4</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix orange" data-order="5">
+			<h5>BOX 5</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix black" data-order="6">
+			<h5>BOX 6</h5>
+			<h6>black</h6>
+		</div>
+		<div class="mix black" data-order="7">
+			<h5>BOX 7</h5>
+			<h6>black</h6>
+		</div>
+		<div class="mix orange" data-order="8">
+			<h5>BOX 8</h5>
+			<h6>orange</h6>
+		</div>
+		<div class="mix green" data-order="9">
+			<h5>BOX 9</h5>
+			<h6>green</h6>
+		</div>
+		<div class="mix green" data-order="10">
+			<h5>BOX 10</h5>
+			<h6>green</h6>
+		</div>
+		<div class="mix blue" data-order="11">
+			<h5>BOX 11</h5>
+			<h6>blue</h6>
+		</div>
+		<div class="mix green" data-order="12">
+			<h5>BOX 12</h5>
+			<h6>green</h6>
+		</div>		
+		
+		<div class="container">
+			<label for="filter">Filter</label>
+			<select name="" id="filter">
+				<option value="all">all</option>
+				<option value=".black">black</option>
+				<option value=".orange">orange</option>
+				<option value=".black">black</option>
+				<option value=".green">green</option>
+			</select>
+			<label for="sort">Filter</label>
+			<select name="" id="sort">
+				<option value="order:asc">Ascending</option>
+				<option value="order:descending">Descending</option>
+				<option value="random">Random</option>
+			</select>
+		</div>
+	<!-- Add Bower components -->
+
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script src="js/mixitup.min.js"></script>
+		<script>
+			var mixer = mixitup('.mix-wrapper', {
+				"animation": {
+        "nudge": true,
+        "reverseOut": false,
+        "effects": "fade translateZ(-100px) rotateX(180deg)"
+    }
+
+		/*
+			#filter의 값이 변경되면 할일
+				그 변경된 값을 변수명 target에 담고
+				target이 보이도록 filter 메서드 실행
+		*/
+	});
+	
+			$('#filter').change(function(){
+				let target = $(this).val()
+				mixer.filter(target)
+			})
+
+			$('#sort').change(function(){
+				let target = $(this).val()
+				mixer.filter(target)
+			})
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

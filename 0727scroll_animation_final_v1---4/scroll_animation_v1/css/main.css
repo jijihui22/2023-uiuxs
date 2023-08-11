@@ -1,0 +1,21 @@
+img {
+    margin: 10px 0;
+}
+
+div[class*="fade"]{
+    opacity: 0;
+    transition:0.5s ease-out;
+}
+.fade-in-left{
+    transform:translateX(-100%);    
+}
+.fade-in-right{
+    transform:translateX(100%);
+}
+.fade-up-bottom{
+    transform:translateY(100%);
+}
+.active [class*="fade"]{
+    transform:none;
+    opacity: 1;
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* Base */
+html { height: 100%; }
+body { height: 100%; }
+.scene { height : 100%; position: relative;  overflow: hidden; }
+
+.full-bg {
+    position: absolute;
+}
+.full-bg img,
+.full-bg video,
+.full-bg iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;   
+}
+main {
+    width: 1140px;
+    margin:0 auto;
+}
+main section{
+    padding:108px 0;    
+}
+
