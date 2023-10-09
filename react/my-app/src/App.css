@@ -1,0 +1,27 @@
+.App{  
+  padding: 30px;
+}
+
+.content{
+  background: #ebebeb;
+}
+.menu{
+  display: flex;
+  gap:20px;
+  list-style: none;
+  align-items: center;
+}
+.menu a, 
+.menu input{
+  padding: 10px 15px;
+  border:1px solid #ccc;
+  background: #ebebeb;
+  text-decoration: none;  
+  font-size: 16px;  
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+form label{
+  display: block;
+}

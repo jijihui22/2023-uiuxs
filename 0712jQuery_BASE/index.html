@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .cursor {
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: 9999;
+    width: 350px;
+    height: 100px;
+    transform:translate(-50%, -50%);
+}
+ 
+    </style>
+  </head>
+  <body>
+    <div class="cursor">
+      <img src="img/di_textLogo.png" alt="fllow_img">
+  </div>
+  <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"></script>
+    <script>
+      $(document).mousemove(function(e){
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+
+        $('.cursor').css({
+            left: mouseX + "px",
+            top : mouseY + "px"
+        })
+    })
+    </script>
+  </body>
+  </html>
